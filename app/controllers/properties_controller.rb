@@ -1,7 +1,7 @@
-class V1::PropertiesController < ApplicationController
+class PropertiesController < ApplicationController
   def index
-    @properties =Property.all 
-    render json: @properties, status: :ok
+    properties =Property.all 
+    render json: properties, status: :ok
 	end
 	def create
 		property = Property.create(prop_params)
@@ -21,6 +21,6 @@ class V1::PropertiesController < ApplicationController
 	end
 	private
 	def prop_params
-		params.require(:properties).permit(:name,:category,:price,:size);
+		params.require(:properties).permit(:name,:category,:price,:location, :description);
 	end
 end

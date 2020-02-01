@@ -1,293 +1,70 @@
-  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5726409204506617200)[0m
-  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateProperties (20200130153736)
+  [1m[35m (48.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (23.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (547.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Real_Estate_api_development"[0m
+  [1m[35m (480.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Real_Estate_api_test"[0m
+  [1m[35m (1226.6ms)[0m  [1m[35mCREATE DATABASE "Real_Estate_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (1029.1ms)[0m  [1m[35mCREATE DATABASE "Real_Estate_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (187.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (139.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5068306228320545910)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200201153058)
   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (412.6ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "name" character varying, "category" character varying, "price" character varying, "size" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
-  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200130153736"]]
-  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(5726409204506617200)[0m
+  [1m[35m (131.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "country" character varying, "email" character varying, "password" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200201153058"]]
+  [1m[35m (14.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProperties (20200201153209)
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (102.4ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "name" character varying, "category" character varying, "description" character varying, "price" character varying, "location" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200201153209"]]
+  [1m[35m (24.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-01 15:32:56.230592"], ["updated_at", "2020-02-01 15:32:56.230592"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(5068306228320545910)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5068306228320545910)[0m
+  [1m[35m (25.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAuthenticationTokenToUsers (20200201155254)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.0ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" character varying(30)[0m
+  [1m[35m (107.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200201155254"]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5068306228320545910)[0m
   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Started GET "/" for ::1 at 2020-01-30 10:47:31 -0500
-  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-02-01 10:55:45 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Rails::WelcomeController#index as HTML
   Rendering /home/addo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /home/addo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 32.7ms | Allocations: 487)
-Completed 200 OK in 83ms (Views: 46.4ms | ActiveRecord: 0.0ms | Allocations: 2635)
+  Rendered /home/addo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 53.1ms | Allocations: 484)
+Completed 200 OK in 278ms (Views: 113.8ms | ActiveRecord: 0.0ms | Allocations: 2633)
 
 
-Started GET "/favicon.ico" for ::1 at 2020-01-30 10:47:33 -0500
-  
-ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/v1/properties" for ::1 at 2020-01-30 10:47:46 -0500
-  
-AbstractController::ActionNotFound (The action 'index' could not be found for V1::PropertiesController):
-  
-actionpack (6.0.2.1) lib/abstract_controller/base.rb:131:in `process'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
-actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
-actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
-actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
-rack (2.1.2) lib/rack/etag.rb:27:in `call'
-rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
-rack (2.1.2) lib/rack/head.rb:14:in `call'
-activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
-activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/v1/properties" for ::1 at 2020-01-30 10:49:48 -0500
-Processing by V1::PropertiesController#index as HTML
-Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1620)
-
-
-  
-NameError (uninitialized constant V1::PropertiesController::Properties
-Did you mean?  Property):
-  
-app/controllers/v1/properties_controller.rb:3:in `index'
-Started GET "/v1/properties" for ::1 at 2020-01-30 10:50:19 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (63.1ms)[0m  [1m[34mSELECT "properties".* FROM "properties" LIMIT $1[0m  [["LIMIT", 11]]
-  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" LIMIT $1[0m  [["LIMIT", 11]]
-Completed 500 Internal Server Error in 509ms (ActiveRecord: 0.0ms | Allocations: 73428)
-
-
-  [1m[36mCACHE Property Load (0.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" LIMIT $1[0m  [["LIMIT", 11]]
-  
-NameError (undefined local variable or method `ok' for #<V1::PropertiesController:0x00005605de301ee0>):
-  
-app/controllers/v1/properties_controller.rb:4:in `index'
-Started GET "/v1/properties" for ::1 at 2020-01-30 10:50:45 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 4.2ms | Allocations: 1697)
-
-
-Started GET "/v1/properties" for ::1 at 2020-01-30 11:12:13 -0500
-  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (17.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 38ms (Views: 4.7ms | ActiveRecord: 21.9ms | Allocations: 1871)
-
-
-Started GET "/v1/properties" for ::1 at 2020-01-30 11:12:55 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 828)
-
-
-Started GET "/v1/properties" for ::1 at 2020-01-30 11:13:50 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 828)
-
-
-Started GET "/v1/properties" for ::1 at 2020-01-30 11:14:11 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (1.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.2ms | Allocations: 828)
-
-
-Started GET "/v1/properties" for ::1 at 2020-01-30 11:15:25 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.8ms | Allocations: 828)
-
-
-Started GET "/v1/properties" for 127.0.0.1 at 2020-01-30 11:17:38 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (175.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 192ms (Views: 15.8ms | ActiveRecord: 175.6ms | Allocations: 810)
-
-
-Started GET "/v1/properties" for 127.0.0.1 at 2020-01-30 11:18:10 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 810)
-
-
-Started GET "/v1/properties" for 127.0.0.1 at 2020-01-30 11:18:12 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 810)
-
-
-Started GET "/v1/properties" for 127.0.0.1 at 2020-01-30 11:18:24 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 810)
-
-
-Started GET "/v1/properties" for 127.0.0.1 at 2020-01-30 11:18:40 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (1.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.4ms | Allocations: 810)
-
-
-Started GET "/v1/properties" for 127.0.0.1 at 2020-01-30 11:18:52 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 810)
-
-
-Started GET "/v1/properties" for 127.0.0.1 at 2020-01-30 11:21:12 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (23.1ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 26ms (Views: 2.6ms | ActiveRecord: 23.1ms | Allocations: 811)
-
-
-Started GET "/v1/properties" for 127.0.0.1 at 2020-01-30 11:22:34 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 810)
-
-
-Started GET "/v1/properties" for 127.0.0.1 at 2020-01-30 11:22:38 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 810)
-
-
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5726409204506617200)[0m
-  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to DeviseCreateUsers (20200131183253)
-  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (137.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying DEFAULT '' NOT NULL, "email" character varying DEFAULT '' NOT NULL, "country" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
-  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5726409204506617200)[0m
-  [1m[35m (69.5ms)[0m  [1m[35mDROP TABLE "users"[0m
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5726409204506617200)[0m
-  [1m[35m (17.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to DeviseCreateUsers (20200131183253)
-  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (335.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying DEFAULT '' NOT NULL, "email" character varying DEFAULT '' NOT NULL, "country" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
-  [1m[35m (71.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
-  [1m[35m (125.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
-  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200131183253"]]
-  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(5726409204506617200)[0m
-  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "addo@gmail.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "country", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "addo"], ["email", "addo@gmail.com"], ["country", "Ghana"], ["encrypted_password", "$2a$11$GUqnpPOVi/AEIWZq5kfdbuwZBK6/FiJisrGhLmmkuKHVS6PjjlWP."], ["created_at", "2020-01-31 18:36:37.175088"], ["updated_at", "2020-01-31 18:36:37.175088"]]
-  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5726409204506617200)[0m
-  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to AddAuthenticationTokenToUsers (20200131183912)
-  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (9.2ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" character varying(30)[0m
-  [1m[35m (62.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
-  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200131183912"]]
-  [1m[35m (61.0ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5726409204506617200)[0m
-  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dela@gmail.com"], ["LIMIT", 1]]
-  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = $1[0m  [["authentication_token", "1RSRog_nyeguruHtaAzp"]]
-  [1m[36mUser Create (30.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "country", "encrypted_password", "created_at", "updated_at", "authentication_token") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "dela"], ["email", "dela@gmail.com"], ["country", "congo"], ["encrypted_password", "$2a$11$MYRg4eqE9URoOTea5RWn9OK5kYqlCu5unpNZJcKhtvGg3i9tH7BIG"], ["created_at", "2020-01-31 18:40:42.931256"], ["updated_at", "2020-01-31 18:40:42.931256"], ["authentication_token", "1RSRog_nyeguruHtaAzp"]]
-  [1m[35m (123.3ms)[0m  [1m[35mCOMMIT[0m
 DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
  (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
-Started GET "/users/sign_up" for ::1 at 2020-01-31 14:05:03 -0500
-  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by Users::RegistrationsController#new as HTML
-Completed 406 Not Acceptable in 53ms (ActiveRecord: 13.4ms | Allocations: 8435)
-
-
+Started GET "/v1/properties" for ::1 at 2020-02-01 10:56:18 -0500
   
-ActionController::UnknownFormat (ActionController::UnknownFormat):
+ActionController::RoutingError (uninitialized constant V1):
   
-responders (3.0.0) lib/action_controller/respond_with.rb:215:in `respond_with'
-devise (4.7.1) app/controllers/devise/registrations_controller.rb:12:in `new'
-actionpack (6.0.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
-actionpack (6.0.2.1) lib/abstract_controller/base.rb:196:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
-actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
-activesupport (6.0.2.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
-actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
-activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
-activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
-activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
-actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
-activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
-actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
-actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
-actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
 actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
 actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
 actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
@@ -320,45 +97,44 @@ actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
 rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
 railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
 puma (4.3.1) lib/puma/configuration.rb:228:in `call'
 puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/users/sign_up" for ::1 at 2020-01-31 14:05:39 -0500
-Processing by Users::RegistrationsController#new as HTML
-Completed 406 Not Acceptable in 40ms (ActiveRecord: 9.7ms | Allocations: 7941)
-
-
+Started GET "/Api/v1/properties" for ::1 at 2020-02-01 10:57:59 -0500
   
-ActionController::UnknownFormat (ActionController::UnknownFormat):
+ArgumentError ('Api/v1/properties' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
   
-responders (3.0.0) lib/action_controller/respond_with.rb:215:in `respond_with'
-devise (4.7.1) app/controllers/devise/registrations_controller.rb:12:in `new'
-actionpack (6.0.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
-actionpack (6.0.2.1) lib/abstract_controller/base.rb:196:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
-actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
-activesupport (6.0.2.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
-actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
-activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
-activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
-activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
-actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
-activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
-actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
-actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
-actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+config/routes.rb:4:in `block (3 levels) in <top (required)>'
+config/routes.rb:3:in `block (2 levels) in <top (required)>'
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/Api/v1/properties" for ::1 at 2020-02-01 11:00:00 -0500
+  
+ArgumentError ('Api/v1/properties' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block (3 levels) in <top (required)>'
+config/routes.rb:3:in `block (2 levels) in <top (required)>'
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
+Started GET "/v1/properties" for ::1 at 2020-02-01 11:04:03 -0500
+  
+ActionController::RoutingError (uninitialized constant V1):
+  
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
 actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
 actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
 actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
@@ -391,45 +167,26 @@ actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
 rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
 railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
 puma (4.3.1) lib/puma/configuration.rb:228:in `call'
 puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/users/sign_up" for ::1 at 2020-01-31 14:06:46 -0500
-Processing by Devise::RegistrationsController#new as HTML
-Completed 406 Not Acceptable in 40ms (ActiveRecord: 10.4ms | Allocations: 7852)
-
-
+Started GET "/v1/properties" for ::1 at 2020-02-01 11:04:18 -0500
   
-ActionController::UnknownFormat (ActionController::UnknownFormat):
+ActionController::RoutingError (uninitialized constant V1):
   
-responders (3.0.0) lib/action_controller/respond_with.rb:215:in `respond_with'
-devise (4.7.1) app/controllers/devise/registrations_controller.rb:12:in `new'
-actionpack (6.0.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
-actionpack (6.0.2.1) lib/abstract_controller/base.rb:196:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
-actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
-activesupport (6.0.2.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
-actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
-activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
-activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
-activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
-actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
-activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
-actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
-actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
-actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.2.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.2.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
 actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
 actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
 actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
@@ -462,96 +219,29 @@ actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
 rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
 railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
 puma (4.3.1) lib/puma/configuration.rb:228:in `call'
 puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/users/sign_up" for ::1 at 2020-01-31 14:06:55 -0500
-Processing by Devise::RegistrationsController#new as HTML
-Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 261)
-
-
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
+Started GET "/properties" for ::1 at 2020-02-01 11:06:35 -0500
   
-ActionController::UnknownFormat (ActionController::UnknownFormat):
+ActionController::RoutingError (uninitialized constant Api):
   
-responders (3.0.0) lib/action_controller/respond_with.rb:215:in `respond_with'
-devise (4.7.1) app/controllers/devise/registrations_controller.rb:12:in `new'
-actionpack (6.0.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
-actionpack (6.0.2.1) lib/abstract_controller/base.rb:196:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
-actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
-activesupport (6.0.2.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
-actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
-activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
-activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
-activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
-actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
-actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
-activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
-actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
-actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
-actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
-actionpack (6.0.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
-actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
-actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
-actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
-actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
-warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
-warden (1.2.8) lib/warden/manager.rb:34:in `catch'
-warden (1.2.8) lib/warden/manager.rb:34:in `call'
-rack (2.1.2) lib/rack/etag.rb:27:in `call'
-rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
-rack (2.1.2) lib/rack/head.rb:14:in `call'
-activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
-activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/users/sign_up" for ::1 at 2020-01-31 14:08:45 -0500
-Processing by Devise::RegistrationsController#new as HTML
-Completed 200 OK in 45ms (Views: 0.3ms | ActiveRecord: 9.1ms | Allocations: 7858)
+app/controllers/properties_controller.rb:1:in `<top (required)>'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
+Started GET "/properties" for ::1 at 2020-02-01 11:08:26 -0500
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (41.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 6.7ms | ActiveRecord: 47.8ms | Allocations: 1942)
 
 
-Started GET "/users/sign_up" for ::1 at 2020-01-31 14:11:17 -0500
-Processing by Devise::RegistrationsController#new as HTML
-Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 219)
-
-
-Started GET "/users" for ::1 at 2020-01-31 14:11:34 -0500
+Started GET "/users" for ::1 at 2020-02-01 11:08:49 -0500
   
 ActionController::RoutingError (No route matches [GET] "/users"):
   
@@ -571,322 +261,274 @@ actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
 rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
 railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
 puma (4.3.1) lib/puma/configuration.rb:228:in `call'
 puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/v1/properties" for ::1 at 2020-01-31 14:14:12 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (45.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 78ms (Views: 5.5ms | ActiveRecord: 49.7ms | Allocations: 1573)
+Started POST "/users" for ::1 at 2020-02-01 11:10:05 -0500
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"username"=>"love", "email"=>"chick@yahoo.com", "country"=>"lebanon", "password"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 6.8ms | Allocations: 166)
 
 
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:20:in `user_params'
+app/controllers/users_controller.rb:3:in `create'
+Started POST "/users" for ::1 at 2020-02-01 11:12:25 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"love", "email"=>"chick@yahoo.com", "country"=>"lebanon", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (85.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = $1[0m  [["authentication_token", "RTL1YkcWqwg489yDGiiX"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (36.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "country", "email", "password", "created_at", "updated_at", "authentication_token") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "love"], ["country", "lebanon"], ["email", "chick@yahoo.com"], ["password", "qwertyuiop"], ["created_at", "2020-02-01 16:12:26.081915"], ["updated_at", "2020-02-01 16:12:26.081915"], ["authentication_token", "RTL1YkcWqwg489yDGiiX"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (49.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 200 OK in 261ms (Views: 1.2ms | ActiveRecord: 194.4ms | Allocations: 12974)
+
+
+Started POST "/users" for ::1 at 2020-02-01 11:14:29 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"apartment", "category"=>"duplex", "price"=>23, "size"=>234}}
+[31mUnpermitted parameters: :name, :category, :price, :size[0m
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = $1[0m  [["authentication_token", "WzYbJ6t2kkJM7e9cs6r-"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (3.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "authentication_token") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2020-02-01 16:14:29.656055"], ["updated_at", "2020-02-01 16:14:29.656055"], ["authentication_token", "WzYbJ6t2kkJM7e9cs6r-"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (21.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 200 OK in 42ms (Views: 0.6ms | ActiveRecord: 30.2ms | Allocations: 3434)
+
+
+Started POST "/properties" for ::1 at 2020-02-01 11:15:00 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"user"=>{"name"=>"apartment", "category"=>"duplex", "price"=>23, "size"=>234}, "property"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 3.1ms | Allocations: 143)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: properties):
+  
+app/controllers/properties_controller.rb:24:in `prop_params'
+app/controllers/properties_controller.rb:7:in `create'
+Started POST "/properties" for ::1 at 2020-02-01 11:15:16 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"apartment", "category"=>"duplex", "price"=>23, "size"=>234}, "property"=>{}}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.2ms | Allocations: 5376)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'size' for Property.):
+  
+app/controllers/properties_controller.rb:7:in `create'
+Started POST "/properties" for ::1 at 2020-02-01 11:15:43 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"apartment", "category"=>"duplex", "price"=>"23", "size"=>"234"}, "property"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 275)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'size' for Property.):
+  
+app/controllers/properties_controller.rb:7:in `create'
+Started POST "/properties" for ::1 at 2020-02-01 11:18:25 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"properties":{
+		"name": "apartment",
+		"category": "duplex",
+		"price": "23",
+		"location": "Ghana"
+		"description": "this is a random description"
+	}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+	"properties":{
+		"name": "apartment",
+		"category": "duplex",
+		"price": "23",
+		"location": "Ghana"
+		"description": "this is a random description"
+	}
+}'):
+  
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch_header'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"properties":{
+		"name": "apartment",
+		"category": "duplex",
+		"price": "23",
+		"location": "Ghana"
+		"description": "this is a random description"
+	}
+}
+Started POST "/properties" for ::1 at 2020-02-01 11:18:56 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"properties":{
+		"name": "apartment",
+		"category": "duplex",
+		"price": "23",
+		"location": "Ghana"
+		"description": "description"
+	}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+	"properties":{
+		"name": "apartment",
+		"category": "duplex",
+		"price": "23",
+		"location": "Ghana"
+		"description": "description"
+	}
+}'):
+  
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch_header'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"properties":{
+		"name": "apartment",
+		"category": "duplex",
+		"price": "23",
+		"location": "Ghana"
+		"description": "description"
+	}
+}
+Started POST "/properties" for ::1 at 2020-02-01 11:19:12 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"apartment", "category"=>"duplex", "price"=>"23", "location"=>"Ghana", "description"=>"this is a random description"}, "property"=>{}}
   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mProperty Create (98.6ms)[0m  [1m[32mINSERT INTO "properties" ("name", "category", "price", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "apartment house"], ["category", "self contain"], ["price", "123"], ["size", 222], ["created_at", "2020-01-31 20:50:44.072631"], ["updated_at", "2020-01-31 20:50:44.072631"]]
-  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
-Started GET "/" for ::1 at 2020-01-31 15:51:36 -0500
-  [1m[35m (35.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (1.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 38ms (Views: 25.1ms | ActiveRecord: 10.8ms | Allocations: 6477)
+  ↳ app/controllers/properties_controller.rb:7:in `create'
+  [1m[36mProperty Create (1.3ms)[0m  [1m[32mINSERT INTO "properties" ("name", "category", "description", "price", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "apartment"], ["category", "duplex"], ["description", "this is a random description"], ["price", "23"], ["location", "Ghana"], ["created_at", "2020-02-01 16:19:12.572358"], ["updated_at", "2020-02-01 16:19:12.572358"]]
+  ↳ app/controllers/properties_controller.rb:7:in `create'
+  [1m[35m (32.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:7:in `create'
+Completed 201 Created in 70ms (Views: 0.6ms | ActiveRecord: 43.3ms | Allocations: 7634)
 
 
-Started GET "/favicon.ico" for ::1 at 2020-01-31 15:51:37 -0500
-  
-ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/" for ::1 at 2020-01-31 15:52:51 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 36ms (Views: 25.2ms | ActiveRecord: 8.8ms | Allocations: 6073)
-
-
-Started GET "/v1/properties" for ::1 at 2020-01-31 15:55:09 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 35ms (Views: 18.9ms | ActiveRecord: 14.0ms | Allocations: 5951)
-
-
-DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
- (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
-Started GET "/users/sign_up" for ::1 at 2020-01-31 15:56:55 -0500
-  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by Devise::RegistrationsController#new as HTML
-Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 9.8ms | Allocations: 8420)
-
-
-Started POST "/users/sign_up" for ::1 at 2020-01-31 16:49:00 -0500
-  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
-ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started POST "/users/sign_up" for ::1 at 2020-01-31 16:52:50 -0500
-  
-ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started POST "/users/sign_up" for ::1 at 2020-01-31 17:04:31 -0500
-  
-ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started POST "/users/sign_up" for ::1 at 2020-01-31 17:09:44 -0500
-  
-ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started POST "/users/sign_up" for ::1 at 2020-01-31 17:12:06 -0500
-  
-ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started POST "/users/sign_up" for ::1 at 2020-01-31 17:15:23 -0500
-  
-ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started POST "/users/sign_up" for ::1 at 2020-01-31 17:16:40 -0500
-  
-ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started POST "/users/sign_up" for ::1 at 2020-01-31 17:17:04 -0500
-  
-ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
-  
-actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.1.2) lib/rack/runtime.rb:24:in `call'
-activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
-actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.1) lib/puma/configuration.rb:228:in `call'
-puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
-puma (4.3.1) lib/puma/server.rb:472:in `process_client'
-puma (4.3.1) lib/puma/server.rb:328:in `block in run'
-puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
- (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
-Started POST "/users/" for ::1 at 2020-01-31 17:25:35 -0500
-  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"username"=>"forison", "country"=>"Ghana", "email"=>"forison6205@gmail.com", "password"=>"[FILTERED]", "passwordCon"=>"[FILTERED]", "error"=>"", "registration"=>{"username"=>"forison", "country"=>"Ghana", "email"=>"forison6205@gmail.com", "password"=>"[FILTERED]", "passwordCon"=>"[FILTERED]", "error"=>""}}
-Completed 200 OK in 272ms (Views: 0.3ms | ActiveRecord: 8.4ms | Allocations: 12396)
-
-
-Started GET "/users/sign_up" for ::1 at 2020-01-31 17:25:52 -0500
-Processing by Devise::RegistrationsController#new as HTML
-Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 227)
-
-
-Started GET "/users" for ::1 at 2020-01-31 17:26:10 -0500
+Started GET "/users" for ::1 at 2020-02-01 11:19:22 -0500
   
 ActionController::RoutingError (No route matches [GET] "/users"):
   
@@ -906,40 +548,17 @@ actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
 rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
-rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
 railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
 puma (4.3.1) lib/puma/configuration.rb:228:in `call'
 puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-  [1m[36mUser Load (114.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
-Started POST "/users/" for ::1 at 2020-01-31 17:27:58 -0500
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"username"=>"kromo", "country"=>"Ghana", "email"=>"orison6205@gmail.com", "password"=>"[FILTERED]", "passwordCon"=>"[FILTERED]", "error"=>"", "registration"=>{"username"=>"kromo", "country"=>"Ghana", "email"=>"orison6205@gmail.com", "password"=>"[FILTERED]", "passwordCon"=>"[FILTERED]", "error"=>""}}
-Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1227)
+Started GET "/properties" for ::1 at 2020-02-01 11:19:30 -0500
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.6ms | Allocations: 1032)
 
 
-Started POST "/users/" for ::1 at 2020-01-31 17:29:28 -0500
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"username"=>"forison", "country"=>"Ghana", "email"=>"forison6205@gmail.com", "password"=>"[FILTERED]", "passwordCon"=>"[FILTERED]", "error"=>"", "registration"=>{"username"=>"forison", "country"=>"Ghana", "email"=>"forison6205@gmail.com", "password"=>"[FILTERED]", "passwordCon"=>"[FILTERED]", "error"=>""}}
-Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1166)
-
-
-  [1m[35m (59.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
-Started POST "/users/" for ::1 at 2020-01-31 17:34:19 -0500
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"username"=>"charles", "country"=>"Ghana", "email"=>"forison6205@gmail.com", "password"=>"[FILTERED]", "passwordCon"=>"[FILTERED]", "error"=>"", "registration"=>{"username"=>"charles", "country"=>"Ghana", "email"=>"forison6205@gmail.com", "password"=>"[FILTERED]", "passwordCon"=>"[FILTERED]", "error"=>""}}
-Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1175)
-
-
-Started GET "/v1/properties" for ::1 at 2020-01-31 17:42:45 -0500
-Processing by V1::PropertiesController#index as HTML
-  [1m[36mProperty Load (44.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
-  ↳ app/controllers/v1/properties_controller.rb:4:in `index'
-Completed 200 OK in 168ms (Views: 74.5ms | ActiveRecord: 79.5ms | Allocations: 6352)
-
-
-  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
-  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]

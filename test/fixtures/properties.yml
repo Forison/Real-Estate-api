@@ -3,11 +3,13 @@
 one:
   name: MyString
   category: MyString
+  description: MyString
   price: MyString
-  size: 1
+  location: MyString
 
 two:
   name: MyString
   category: MyString
+  description: MyString
   price: MyString
-  size: 1
+  location: MyString
