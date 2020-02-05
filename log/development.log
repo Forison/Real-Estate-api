@@ -1127,3 +1127,52 @@ Processing by SessionsController#create as */*
 Completed 200 OK in 68ms (Views: 1.0ms | ActiveRecord: 10.4ms | Allocations: 9041)
 
 
+Started POST "/sessions" for ::1 at 2020-02-05 06:28:53 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (105.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 952ms (ActiveRecord: 106.5ms | Allocations: 8881)
+
+
+  
+NoMethodError (undefined method `[]=' for 2:Integer
+Did you mean?  []):
+  
+app/controllers/json_web_token.rb:5:in `encode'
+app/controllers/sessions_controller.rb:5:in `create'
+Started POST "/sessions" for ::1 at 2020-02-05 06:31:18 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 761ms (ActiveRecord: 46.0ms | Allocations: 9722)
+
+
+  
+NameError (uninitialized constant JsonWebToken::JWT):
+  
+app/controllers/json_web_token.rb:6:in `encode'
+app/controllers/sessions_controller.rb:5:in `create'
+Started POST "/sessions" for ::1 at 2020-02-05 06:32:11 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 698ms (ActiveRecord: 0.6ms | Allocations: 2032)
+
+
+  
+NameError (uninitialized constant JsonWebToken::JWT):
+  
+app/controllers/json_web_token.rb:6:in `encode'
+app/controllers/sessions_controller.rb:5:in `create'
+Started POST "/sessions" for ::1 at 2020-02-05 06:32:30 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 745ms (Views: 0.6ms | ActiveRecord: 13.5ms | Allocations: 9800)
+
+
