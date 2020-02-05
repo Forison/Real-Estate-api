@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(version: 2020_02_01_155254) do
     t.string "username"
     t.string "country"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
+    t.string "password_confirmation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "authentication_token", limit: 30
