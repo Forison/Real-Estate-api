@@ -1176,3 +1176,1476 @@ Processing by SessionsController#create as */*
 Completed 200 OK in 745ms (Views: 0.6ms | ActiveRecord: 13.5ms | Allocations: 9800)
 
 
+Started POST "/sessions" for ::1 at 2020-02-05 06:36:34 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 697ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 688)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 06:36:57 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 760ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 850)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 06:37:27 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 734ms (Views: 0.4ms | ActiveRecord: 7.9ms | Allocations: 8555)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 06:37:36 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 687ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 660)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 06:38:31 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 716ms (Views: 0.4ms | ActiveRecord: 8.7ms | Allocations: 8247)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 06:48:40 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ama@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ama@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 719ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 8339)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 06:48:58 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 5.3ms | Allocations: 161)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 06:49:00 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 136)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProperty Create (42.1ms)[0m  [1m[32mINSERT INTO "properties" ("name", "category", "description", "price", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "estate"], ["category", "duplex"], ["description", "very nice house"], ["price", "123"], ["location", "tantra hills"], ["created_at", "2020-02-05 11:50:46.638609"], ["updated_at", "2020-02-05 11:50:46.638609"]]
+  [1m[35m (70.2ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/properties" for ::1 at 2020-02-05 06:50:53 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"email"=>"ama@gmail.com", "password"=>"[FILTERED]", "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 136)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 06:51:13 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 136)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 06:51:44 -0500
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 21.7ms | ActiveRecord: 10.0ms | Allocations: 7014)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (413.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Real_Estate_api_development"[0m
+  [1m[35m (350.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Real_Estate_api_test"[0m
+  [1m[35m (1841.1ms)[0m  [1m[35mCREATE DATABASE "Real_Estate_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (1108.7ms)[0m  [1m[35mCREATE DATABASE "Real_Estate_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (154.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (118.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5068306228320545910)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200201153058)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (80.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "country" character varying, "email" character varying, "password_digest" character varying, "password_confirmation" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200201153058"]]
+  [1m[35m (19.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAuthenticationTokenToUsers (20200201155254)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" character varying(30)[0m
+  [1m[35m (48.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200201155254"]]
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProperties (20200205120022)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (82.1ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint NOT NULL, "name" character varying, "category" character varying, "description" character varying, "price" character varying, "location" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (35.1ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_user_id" ON "properties"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205120022"]]
+  [1m[35m (23.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-05 12:00:52.619256"], ["updated_at", "2020-02-05 12:00:52.619256"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(5068306228320545910)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (18.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "kofi@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = $1[0m  [["authentication_token", "y9fQquthyfZwzjTDhUgP"]]
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "country", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "kofi"], ["country", "Ghana"], ["email", "kofi@yahoo.com"], ["password_digest", "$2a$12$jtgI5B/RGc8DUWul9JZ.xeNB9pwO3sjDjdEypljPEcRhD46NpnkU."], ["created_at", "2020-02-05 12:04:20.380357"], ["updated_at", "2020-02-05 12:04:20.380357"], ["authentication_token", "y9fQquthyfZwzjTDhUgP"]]
+  [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/properties" for ::1 at 2020-02-05 07:12:07 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"1", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 263)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 07:25:10 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"1", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProperty Create (42.2ms)[0m  [1m[32mINSERT INTO "properties" ("user_id", "name", "category", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 1], ["name", "some cool house"], ["category", "awesome"], ["description", "this is a really cool house"], ["location", "Accra"], ["created_at", "2020-02-05 12:27:07.701727"], ["updated_at", "2020-02-05 12:27:07.701727"]]
+  [1m[35m (44.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+Started POST "/properties" for ::1 at 2020-02-05 07:30:21 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 132)
+
+
+  [1m[35m (19.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5068306228320545910)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20200205123454)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (143.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (50.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  [1m[35m (167.5ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (45.1ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  [1m[35m (38.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205123454"]]
+  [1m[35m (22.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5068306228320545910)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5068306228320545910)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5068306228320545910)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (367.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Real_Estate_api_development"[0m
+  [1m[35m (348.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Real_Estate_api_test"[0m
+  [1m[35m (1293.1ms)[0m  [1m[35mCREATE DATABASE "Real_Estate_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (925.9ms)[0m  [1m[35mCREATE DATABASE "Real_Estate_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (142.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (116.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5068306228320545910)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200201153058)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (94.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "country" character varying, "email" character varying, "password_digest" character varying, "password_confirmation" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200201153058"]]
+  [1m[35m (20.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAuthenticationTokenToUsers (20200201155254)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" character varying(30)[0m
+  [1m[35m (42.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200201155254"]]
+  [1m[35m (21.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProperties (20200205120022)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (102.0ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint NOT NULL, "name" character varying, "category" character varying, "description" character varying, "price" character varying, "location" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (66.7ms)[0m  [1m[35mCREATE  INDEX  "index_properties_on_user_id" ON "properties"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205120022"]]
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20200205123454)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (62.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  [1m[35m (105.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (56.1ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  [1m[35m (74.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205123454"]]
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-05 12:40:26.561524"], ["updated_at", "2020-02-05 12:40:26.561524"]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(5068306228320545910)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/properties" for ::1 at 2020-02-05 08:32:56 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 21ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 08:33:10 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 08:34:59 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 08:35:50 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 08:39:53 -0500
+Processing by PropertiesController#index as HTML
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.0ms | Allocations: 40696)
+
+
+  
+NoMethodError (undefined method `authorize_request' for #<PropertiesController:0x000055d1cb370d50>):
+  
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/properties" for ::1 at 2020-02-05 08:40:38 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 38ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 08:41:49 -0500
+Processing by PropertiesController#index as HTML
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.0ms | Allocations: 40690)
+
+
+  
+NoMethodError (undefined method `authorize_request' for #<PropertiesController:0x00007fe820434558>):
+  
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/properties" for ::1 at 2020-02-05 08:42:14 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 08:47:34 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 08:47:37 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:05:31 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 131)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:05:48 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 09:05:56 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 39.6ms | Allocations: 130)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 09:10:31 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 5.2ms | Allocations: 253)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:11:52 -0500
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (22.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:5:in `index'
+Completed 200 OK in 41ms (Views: 6.0ms | ActiveRecord: 26.8ms | Allocations: 3416)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:11:56 -0500
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 819)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:12:57 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:17:06 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 261)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:23:06 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 17ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 09:23:14 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 44.3ms | Allocations: 130)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:23:30 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 09:26:47 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 5.3ms | Allocations: 253)
+
+
+Started POST "/users" for ::1 at 2020-02-05 09:31:35 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"users":{
+		"username": "angel",
+		"email": "angel@yahoo.com"
+		"country": "Ghana"
+		"password": "qwertyuiop",
+		"password_confirmation": "qwertyuiop"
+	}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+	"users":{
+		"username": "angel",
+		"email": "angel@yahoo.com"
+		"country": "Ghana"
+		"password": "qwertyuiop",
+		"password_confirmation": "qwertyuiop"
+	}
+}'):
+  
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch_header'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"users":{
+		"username": "angel",
+		"email": "angel@yahoo.com"
+		"country": "Ghana"
+		"password": "qwertyuiop",
+		"password_confirmation": "qwertyuiop"
+	}
+}
+Started POST "/users" for ::1 at 2020-02-05 09:32:06 -0500
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"username"=>"angel", "email"=>"angel@yahoo.com", "country"=>"Ghana", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 28.5ms | Allocations: 161)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:20:in `user_params'
+app/controllers/users_controller.rb:3:in `create'
+Started POST "/users" for ::1 at 2020-02-05 09:32:24 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"angel", "email"=>"angel@yahoo.com", "country"=>"Ghana", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (113.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = $1[0m  [["authentication_token", "TmbSsHd1fAYveyZDDacw"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (41.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "country", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "angel"], ["country", "Ghana"], ["email", "angel@yahoo.com"], ["password_digest", "$2a$12$qhK47GhXofbAvWIdMVyoK.TxjpDTQAiIeG1kXP1s0aDj56sRufqKm"], ["created_at", "2020-02-05 14:32:26.006114"], ["updated_at", "2020-02-05 14:32:26.006114"], ["authentication_token", "TmbSsHd1fAYveyZDDacw"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (64.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 200 OK in 1566ms (Views: 0.8ms | ActiveRecord: 433.8ms | Allocations: 11082)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 09:33:06 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 931)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 09:34:01 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "session"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 747ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 4385)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 09:34:39 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 3.6ms | Allocations: 148)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 09:34:47 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana", "property"=>{"name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 09:35:27 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"user_id"=>"1", "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}, "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 09:35:42 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"user_id"=>1, "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}, "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 09:35:53 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"properties":{
+	  "user_id",
+	  "name": "bruj kalifa",
+      "category": "duplex",
+      "description": "this is an awesome house",
+      "price": "123",
+      "location": "Ghana"
+    }
+	
+}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+	"properties":{
+	  "user_id",
+	  "name": "bruj kalifa",
+      "category": "duplex",
+      "description": "this is an awesome house",
+      "price": "123",
+      "location": "Ghana"
+    }
+	
+}'):
+  
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch_header'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"properties":{
+	  "user_id",
+	  "name": "bruj kalifa",
+      "category": "duplex",
+      "description": "this is an awesome house",
+      "price": "123",
+      "location": "Ghana"
+    }
+	
+}
+Started POST "/properties" for ::1 at 2020-02-05 09:36:03 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"user_id"=>1, "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}, "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:40:21 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:40:41 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:40:57 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 256)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 09:41:03 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 133)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 10:24:41 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 10:25:13 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"user_id"=>1, "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}, "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 7.6ms | Allocations: 130)
+
+
+Started GET "/properties" for ::1 at 2020-02-05 11:25:03 -0500
+  [1m[35m (91.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 33ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-02-05 11:25:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/properties" for ::1 at 2020-02-05 12:21:03 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"user_id"=>1, "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}, "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 25ms (Views: 23.7ms | ActiveRecord: 282.0ms | Allocations: 134)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (53.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "jon@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (25.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = $1[0m  [["authentication_token", "tHS-xFFzyvsydTMu3QTC"]]
+  [1m[36mUser Create (76.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "country", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "jon"], ["country", "China"], ["email", "jon@yahoo.com"], ["password_digest", "$2a$12$YZE3XUEp5f3r9hZ4TUAyZeACzSvRHyLVdYhyMQ/ulsfJZrt96T/72"], ["created_at", "2020-02-05 17:25:55.149519"], ["updated_at", "2020-02-05 17:25:55.149519"], ["authentication_token", "tHS-xFFzyvsydTMu3QTC"]]
+  [1m[35m (62.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/properties" for ::1 at 2020-02-05 12:44:32 -0500
+Processing by PropertiesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 19ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 13:48:10 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"user_id"=>1, "name"=>"bruj kalifa", "category"=>"duplex", "description"=>"this is an awesome house", "price"=>"123", "location"=>"Ghana"}, "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 16ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/sessions" for ::1 at 2020-02-05 13:51:43 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "session"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 868ms (ActiveRecord: 16.5ms | Allocations: 10901)
+
+
+  
+Errno::ENOENT (No such file or directory - eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTUxMDR9.Y7u3UICxW3-luEL86_Q0FYNl1P_W2COySvwe2F0VKm0):
+  
+app/controllers/sessions_controller.rb:7:in ``'
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/sessions" for ::1 at 2020-02-05 13:53:09 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "session"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 713ms (ActiveRecord: 0.6ms | Allocations: 810)
+
+
+  
+Errno::ENOENT (No such file or directory - eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTUxOTB9.RO10U2nGM90TA3pAZ4xQTcgYpxtcNxMXD0L9PeNXYn4):
+  
+app/controllers/sessions_controller.rb:7:in ``'
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/sessions" for ::1 at 2020-02-05 13:54:25 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"jon@yahoo.com", "password"=>"[FILTERED]", "session"=>{"email"=>"jon@yahoo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jon@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 701ms (ActiveRecord: 0.6ms | Allocations: 810)
+
+
+  
+Errno::ENOENT (No such file or directory - eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1ODEwMTUyNjV9.bfExMuLspGPdZfNt0vS7A22WaneztIN3yxegKxzPsNo):
+  
+app/controllers/sessions_controller.rb:7:in ``'
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/sessions" for ::1 at 2020-02-05 13:54:59 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"jon@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"jon@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 837)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:55:19 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"jon@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"jon@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 826)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:55:30 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 9ms (Views: 0.3ms | ActiveRecord: 6.3ms | Allocations: 834)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:56:03 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 23ms (Views: 0.4ms | ActiveRecord: 5.9ms | Allocations: 3891)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:56:10 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 824)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:56:12 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 824)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:56:13 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 824)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:56:35 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"users"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"users"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 824)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:56:44 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 824)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:56:54 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 824)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 13:59:10 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"user":{
+	"username": "don"
+	"email": "angel@yahoo.com",
+	"password": "qwertyuiop"
+	"country": "china"
+	}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+	"user":{
+	"username": "don"
+	"email": "angel@yahoo.com",
+	"password": "qwertyuiop"
+	"country": "china"
+	}
+}'):
+  
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch'
+rack (2.1.2) lib/rack/request.rb:74:in `fetch_header'
+actionpack (6.0.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"user":{
+	"username": "don"
+	"email": "angel@yahoo.com",
+	"password": "qwertyuiop"
+	"country": "china"
+	}
+}
+Started POST "/sessions" for ::1 at 2020-02-05 13:59:18 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china"}, "session"=>{"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 7ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 828)
+
+
+Started POST "/users" for ::1 at 2020-02-05 13:59:29 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (22.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 928ms (ActiveRecord: 30.7ms | Allocations: 11435)
+
+
+Started POST "/users" for ::1 at 2020-02-05 14:01:23 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 699ms (ActiveRecord: 1.7ms | Allocations: 3081)
+
+
+Started POST "/users" for ::1 at 2020-02-05 14:02:12 -0500
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china", "password_confirmation"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 142)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:20:in `user_params'
+app/controllers/users_controller.rb:3:in `create'
+Started POST "/users" for ::1 at 2020-02-05 14:03:24 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china", "password_confirmation"=>"[FILTERED]", "avatar"=>"data:image/jpeg;base64,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"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 1747ms (ActiveRecord: 2.3ms | Allocations: 6703)
+
+
+Started POST "/users" for ::1 at 2020-02-05 14:03:49 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china", "password_confirmation"=>"[FILTERED]", "avatar"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFhUWGRsZGBgYGR0aGxkfGBcXGB0aGBgYHSggGholHRgXIjEhJSkrLi4uGCAzODMtNygtLisBCgoKDg0OGxAQGy8mICYyLS8vNS0tLS0tMC0tLS0tLS0tLy0tLS0tLS0tLS0vLS0tLS0tLy0tLS0tLS0tLS0tLf/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAEBQADBgIBBwj/xABAEAABAgQEBAMHAgQEBQUAAAABAhEAAwQhBRIxQVFhcYEikaEGEzKxwdHwQuEUI1LxFTNikgckcoLCNENT0uL/xAAaAQACAwEBAAAAAAAAAAAAAAADBAECBQAG/8QAMxEAAQQBAwIDBgUEAwAAAAAAAQACAxEhBBIxE0EiMlEFYXGBkfAUobHB0SMzQlJy4fH/2gAMAwEAAhEDEQA/AAcSq1pd+fq32hNTvNnJSSwJDnrdo0tfPSm1g+xOnQQHmlTMqSL7Hh31EeicLXhIJNrL2/NdT5o2224faM3XTwTzBfkYZ4xVLAUEgWN2/VzcawF7OS0zFLMwPbcW1v8ASKvNnamtOzpxmQoVIzB3Z7trGw9nwTJClJGX9PFTW8neM3XUqUrASfCNuAGzxuwgGUAmzJDcrWiWCilvaMw2NA4J+iTz8Qzcr94a00rJK6iM+aBpqTzvGnqV5UAJF9AIus/UbQGtZ3WPq6IKW6yxcMN9deUOcXqWHu0uwsTx6wIqWpC9HU4c+RLcBzjyrnAAzCbOSOekRwnHeMt71x8UkxPxKCA5yate+/r8orpaT9Ux+Q37wwr6ZWUFyCRmKQGblzI3jijoCsOFg8jYiK1m08JQI+aS+fNc2TaPaVBzAuQrYaecHTZOVgog6Ny+8G0KZWd1HMu51to3nHVlc6YNZgJvQUyTLayVEuDx4P6wvx8kABiwJDer97w4k0pPjdi34dYC9oFj3Sib322I48P3i6yIX3MO6VUdMzzDdQFt2JLADs5eLZCFFQFr8/MnkwgSnqiZSuagPL+8PpUrJLKiwJFz2iBXZNzOLDn4JPVTS/u0B3OnHa52DwsxbKC2Yvudj9Yb4WsJUpS7u6SejG3cv5RncbQFMrTI4tuCokdC5PpFHk1ac0zR1Nv5qmXIz7Bgd73i1C8o0HUfSKMIqpkkuNDe/wBYY4zOSpQUn4iA+50+fOBtqrTjy4P2nhJ6hRWSAWLuH84upMNJbU3u2/WJ7p/Cbf08ekOsHlsWK8o5iIayzZUzTFjPCn+FUikou19Dw8oiJ9ygXJPbzhikhIBJt+bAxncTmqlTCJaEqKiVILGxa41Zt+8ME0vPRXM8q+rzpVa3SPULJFkmYvbh+4HOFcitMwL96piBt14mzQd7Pe8e3hBG1n5BRtEbrTb4ixhJqwuKihqXdghJ1JKR6i8HYDhCZYMzOCdyxtdrD6wzN7oCVEahQdQ6veLKcoLskDZSWYjqNxHVm0nJqnmPbx61+6kkpAd8zen2jmvmDJm23gWvSpJMxNwRcDRQa5HOKqdYUCl/CoW+RHURZBEXD1YkkhwQ3SPYQTJa0kpAVbg7ekSItOfhgeHKutxMLQHHiBY9G1gBFaU3Adw37+mkef4eQlWdTkG3OwI+sA1kjLl4ENmH14PAXOcMrXiii8oRqaogEqNyWA49o6RMHvEpLpCyASNhvFUqn90klTZ0218vM/KC/ZuR71Slrdkiw3JU4H19I4E4C6Ta1rndh9hEYlhC8zJuAbEkDzjR4LOUgBEyxaxJsehj2UEqvldTMHDG3GCQpkssX6vBgFhzzmRgY4fyqa1OVVtCd9jygqTV2aZ2MKjP1SbfL9orM4qd9E66vy1iyGYdwAKKxKVmJALZkgvyGv50hPWzEmaiXskhxrp4mP1gqZiXhSlIJLMBqePp9IGw6iKVla/Eog2Gg6qNurRQpuFpjbbu3Ccz6fNLB3D+t4RTiUOMoGbU66cOEP6RY0d31/aAsSQcxsG47xZBgeWu2nhI6lWYM9+BHyaKKSQtCnEwJ84uqpnu9GfpHkjFkguUhzvv56jtFDV5Wq3ds8Iwm2GYw6ssxXQmwJ8mg+qYuQxSQxHo3OM4rFAotx/L8YspKiYVZUJN+H1GgjtyUfpc7gKRVSEJSEywLAdX31s/OClTFKkjMojW+pOos/LeOlUKEAZlFazruH3DaWj2oluEu7as3CLAIZe018eSgJtMQlKU7JLvrcu7+naOFYfLupSyAQAoDdwx15iPZlYlIJOu37wrm1ZmKA7Afm8VJATUbZDm6XOMSUyrDQsUkl/XeAKaZmJU9hqftxhxjNGoSwJibggg8P0nzhQmST04CBOB3J+FzTHz813LU2Y77ch1jR0SUrQnIMy0nTdTM4PENlP+6EZkgJft6RxIn5ClQJDK1GobcRYHahys6gxyvoyUlSHIyuOkIa6nKEFOq1Wfhu3kYPl4sl7luHA/aPMTdTTJYC+IDP1D6wW1gwh8b6IoH75SrDcGRnSpagSC7C7w8xerSmXY3t1gWgSzHKxuS7PruBAuMoKnN2I8rHf0jhjhFdcsw3nAQP8AjC0qKgoki1+H7QbIxH3pDeGaNOCm2hLKl+BtVEuOjXJ5aRzJUEKYi2ouxB5GIyn3QRm6GVrqes94kjQ8OguCOjxmpNaULQ/wkkHqxHY/aHqJOdOZJ8bAg6ZgPrdvLsmp5KFqUhbgKcpPBT69iCIkpbThg3ei0iagNqnuL94kI11mQ5VjxCx37vwOsSO3BA/Cn0SXEFlJuFcGiukLkEJc81fu0NsdVLCSlkjMfDsepJ1PIQgSlKSk5iyiwN284E40VtQnfHxSOxehmKmFitjqCPJy20NfZOUUCY9lDLY7al76fvCvEK+dZBIewJYv3HFtzDSnw8oQqYFlSVJGuvEdtmiQBusIM5PQDHkC+E5pyVgkrDA/pc/aLqsLIAlgNy9STCbA54KjLFnLl/zrGknTQPDsNewggysecGOSqShVJmPiLAc3duH5tA6lghKWICiwve1gYPxVxLfchvO/7doCWEoHvD+myeDtqI5GjcXC/orqaWAShCdDdZ9esWV1SEIAAcX6nnC/BqpS05G38xueQEH16v0jRmHPj944H0UPYRJTkgn4uoGxb5Q0/js6Ru4AhFX0Dh067jj05wzwHDvdHPOsr9KXfuQNekUBddJ2ZkIjDhyPqgMTpyGO5ik0DpsAVaty5naHuKlBBJFxvdx2+8K6atShBQATmNyTctf6xzgLyrxSvMYoZQ1JhaXdagANkl/X7RpsN934cvZ9gN7RnEOtwkEq2A52JhxheHzA2YMDdRJ9Byjm0OFTV25vidSby1JUczWctzO5PIR64UdLC340cLKQDfM3YQLNri7CwOgGvpBOFmBhccImZSS2KlJASP8AS6j5wBTIQhQKEgXsTc+ZsOwEMKh8gSRtfkTc+sJ0G+X+nXv+epiCjQ2WmyisbplTJZylzYgceXWMkpKgDY66cI2c+aEoGzByYyf8Q6iSLkknuYo8C09oHO2EVhVJplrDkhtg/wBBBkvCSU5gp8ur2HYkdbcorSoPc2i1dQQCEkN1iA0d0097+GoympCoZcpPyHPM8X4dUTJJ93MlqIdwoD5bR5glWW0PXTUQzxCvCUKvc6K4W29fOL13WfK924xltgorEaYzJdiQrY8IWTTNmSShTZ0G7aFOxPEu/lCoY4tIss+cDS8YWFu75vCe8QXBdFo5WisYyE7w/DDKmvmzWY2tta+gHHlCn2glBM0hBBSGA5b/ADJEMK3GUhAbuOJ+0IVrKw25Ovr5u0c4gCgmNMyQv6j/AIJ/gmLJCEg7O/Q7fPyEGzZafekWyq8SSOLB2+cJsLw0pGZmXZhy/wBXKGuIMmUCGzIIKW5G4Hb5CJF1lLzNYJfAecK/3q02KQpt8rv3j2KpVcggEKSOROkSLIG0/wCqXT6AzwohILW6u40OwhXPlpQpiQfdsw2f8EPETPdznBcA+pswhJMcVCRlc/qfiftA3LQ07nZHarH398qqoWSVPdmv94ZYXPdaAPgUkhSCSw3+Zt2i2TRPJK1OcyiUjkNCd4rwKVLCZilHLrfodB3AjgDamSRjo3e7CYYmpFOuWsafCnjoRc8LwXTKK1FT+FLnzYAepPaMtiuK++VlZmc9zr8o09VMSmWlKQwIBbtb5esSDZKUlhcxjA7zG/oisXW8ocf3v8oz+JVfgCSfCPV9+Q/N4a4tMAlpHFIJPAa+ZJjK06vfTVg6BFgeagHPPWIe6sK2ihGzceBlO8Fqke7WpJBVYEcAOHU78osmVNnf6QswSSETS4OVXgcu2x83YbawTjKQ+UF+QYaczpHAmsq7429ah3yiAyE5rZzcO/hGxbidYXz55HiY9Dv5QvXUN4U68dT2gqRhs6Yzgpfj9tYrvvhHEQZ4nn6pyl6iWVsAsMCQWCkqsHfXcP0gCbQSkM7qLcbP04dY0NEkSpeXdKQH4hJ4dzCmsqtxF69UnFK4uLW+XspQVyJUzKQ2zjQbdo9rMR8RD6QmxF1JdOuvX944oAZsxKTooh+gufSK76NJn8M0/wBQ/NP5FOZicylFKTowurn0g6WmXKZQda9n27QLNq35Np8oVYhXKcCX4ju1+waLkgJVsT5TXATOsxZ1AE34D78YGE7gGHz3hXh8tSVKXNSQwsCG1/DBRnDoAPwxUOvJTBgazwtTbCcFn1qskoWF1LNkpGznjrYXtGzw/wD4TSUj+bPmKVvlASPUKMan2FokyqKTlDGYkTFcSVgG/QMO0PiYyptU8u8JoL0Wk0EbYxuFkrCJ/wCFdGNVzv8Acn/6Rkva/wBlZNOsJlZ1JyvdiXc6MByj7DPmMDHzj2tW80dIrDqJN3KJqNJEWYFL5jOxIhkobyc/LWAayrUoXJMajHMOTlVMA5qbW2pA4xkEIS+iwDx3h/qFwWY2FrDxwuRKJLgkfLyjoSyCC7EcoORSJOhPcfaPZ1MoajuIuGLusLpVKTm/V9IdUOGZECYVZSdNyfsIVGgWBpprcRqkp99JRkNwACNNALdi/nBWDOUjqpdoABx3S9VaUgC77k7/AGjxVSlUtQUfEWbsRBP+FEnxJU3z7m0Svw0KSQJeQAavrxeCG0qHxWEt/wAJUbpYg6XiQtRXrT4b2t6x7At7U905uxCdYXKWuY6hq5A9XguoQiUpSljMpbFXK7kDr9Ia0MgS1Ej+hTnYEM1/PyMZDFqtUyZlQCo6sxPc8BFiQ0JGImeU1gUiZ2KkBIGgcAHVjxgKSuZN8CQkXVonYHfiY9qqBUpAmTSHbwpG5i3AZzGVxOZKunxP8/KKZJop0BjYy6PP85QKaUy5yQsA3B4OHjR42tSglSS4u5DcbCE+MLzLHEK9Id4fLEpIUoOSxbZ+nKJaOQgzvsMkPPoi8VocyBmLJAHUsG30/vxhbSISkFYZKXADhnYu/SzecE45XFTSxdR1HMtrwAhRWqSxMxXgHwpGqms//S79YkkBA07HlgDu67rq8GSoiwKiQeNm+0JcOnTZysoL7A8BzPAcYvdM4hJJSACSkbJsLc/l82FJMSgZJUvKhOpP1OpJgRtzvctEARMIAz+iYJkS5IZLZt1M5PFtvKOV4vlsm556+W0BTsQz+EB9+kCe6zG8Fv0SjYd2ZUwk1ynznnvAOcuSxY77f3g6npyRlSLDjFFRRzMoAQpSiSdCeV/tEHhXYWB1YUoZSVkJC7niPlxi1GSWrJL8Sz8RAux2AD5R84KwPBPdgzJjuRpor9oZIlkKDnKGYAW8+zRIaUCXUMDyAbH7pPOpZq/CSEcdz5Ow84Iw+iCSA5AHDfqeMVYlUhKwBGiwnA5tRKSpISHuCSzjSzPwIHHtEPexmXFWayeUBsbbv0CzvtGsZABbKHA6nfyhZRy0gfzdXBCL3Avcg7cN9OUOMYp5SELV70qngsxSyBlIsSq7636W3jG10+YoqJGdStSVFy4I8w1r7DW0Z02p3mmL13sj2bFp4hJqMns3nPv9V+hv+HXtHLqZCZQUn3ktIsN0aJUGtyIGlrBxGrWY/LXsZik2RUy1gFDZmJ0fIbHLsXbuDH3bCvbZBGWoGU//ACoBMtWt32uCL7gixBEIvFLQEMmo3Ssbi+B+38LQ1q7R879o1PMfr8y3o0bSprELSTLWlTszEHV4xePjx35/QfQwSDlIahpAqktABtGOnTdUvYPrvDnHcYEkKQn/ADQ6SP6Du/McIxs6ex7CNCA1ZWXqYiXAEZR6JxScydtRy4xocKqwtGYgW15RkkzSbwZT1BRdBYFnHrDLXZSGo0+9vvWkrSGzBDjRyG9NYT4jXKSAUnKxDhO7g68Y9m1qlC57ftCSZUZjlPeJkdQQ9Npz/l2WswzFySASVPsRfsRDwTCbMRGPwSu91ZgSdemwjRJxlO4127QRhsJDV6ch/gavV1ASSMg8iPSJHJxRHSJF0La7/U/VEomPMShbeIKUpA20bNudCI6NIlKHDBzmWePXtGeq6SZSzPf3XmPiPrfgLW6RpMMq0TpZSCL3uOejfmsDab5XTxljQ9htvelhsWxEzVuxyiyekc0E0ISpb3+Ed7n0+cEY3TpExYFmVb86wNR0uZJlpvmIL6BLPdz1gRvcttmzpCsDH0UoK15oKrhJzHt+7RqaKfnT7wpsLITzF3PAB/WM/Ip5UsEMVEd3PbaKZmJrJYA8ABZvO0SDtGUKaETHwBN5/BJdR+I7ZjcvyFz2imdJ96tIQnMwAA/0jfl+8d4Vhk6YnMoBCG+JW/MDceh4wwo6pKXCElW2YsB3OnaLDKXc7ZYZkheU+FoSVLIzEgByPCGLsN4FxIhsosOwHo/rBtdWJSPEp1cXsOjxnp1QgnRRixoBVga953ORVJShRyhev9I+ZtYQ6osPlS7rVm+Xp94zAr8oyp8IOvE9YOVOeUFKJ4DnFQQiTxSO70CtMnEUA5ZKBzLB44nVS84vvC3AdM3eGU9g6uMECzHxtY8tq0TPmEpc94RVlSVJKtW/aGa5mZCgOEZv3xBKRztEEouki59ys/jAtJJSLWPHl5Q+wPFZppZ0pBU7oyq/pGVQIBexsgcg8Z+hkBKiP0LH+07dtvKGHvFy0gAZR+ecCdGJG09aHXdC64TR7JHiVPN/9xBAezXa+p1L7vCtIbgAHfQJHE2vsodhG7ppwmJc679ecK8bwVL5klvkHAuOFwD1DwtLpayxaOg9sAOMc/Pqs9TJ/mIfQnpowcDqm2/pG0w9ZSpkpCvhCkXALlKQGJBUkkpJKbpUzsRGNXKUH1BY/wBVnB3B2IV56XhqK9C2TMBCk7gJIOUAkMpncZfDbU7eGEXi17DR6kxXtog/RNJ+JqC5KUFGdE5b5CVZ1jMkLvrYhI2YHjA1chOQpZYWWCGPgJHxKKluUg3Oqtotw2hSAtZKSuUP02OUfEsi2a4uyQwJ6xncfr1LeaFi6WOUgpOZgEkpZ1DU9gXvAmttas2oEMO52Hfn8Sg1V2dRKgApRc5fhBOwe421eO1p06QHh0gqaxO/ODZySDexEakQpq8FqXh8pKreDpaPD1B9IokozHg2sWzJrbiDN9Uo/OAuVzoFSACTtHk2oAv8oGl5pig9k8OPIwNzs0EZkdC+yJoFlZdILQ5M9k38oqkyyzAsBwiEhYykudj9IOwFoSsjg93uXomcyIkD5iLW7iJHbl2wLZ4yCZZa4fu/A9IzknEPdTEGWdeVr7EdvWNFiFQEScu7k9QYyqZGZRIHwue0WfaztE0GMh3CIxspWnOmzj15wZgtATKBLoDOs/qUSxZL/CkOL8+kZgVDqKDpmJaNahIqJTEkIQLpFhd7ADnZzcuTFGu3Gwm52GKMNvHr7kNWLlaILJ3y6nqo69vOCvZXJMW7AAXA1duJOvTlHFdQy5UshvFlHbMQPl9Yp9lJ4SydHGvQ/nnFh5speQ7tO4staP2iqzLlqIuMoH+4kP5tGJkiZNUz6xu6iR71DHQgpPf7GMhSTUp8Ilqc7l/SzekS4ZQPZ7g2IgDxI6qpkIlhNlHc8f2hPNBawAHIQ7rZqQkZkkEbuLnkCIWzcQRoc/mPtHOpMwF9XVoClosxzLJy/PkIYqTnN9ALAbCB/eA6K/POLJMyWlrqUd9hz0uYqAAjPLnZTGjmBDvZ9BqwgiqqwQCPlCGoqjoG4W+5vBWH1KyQkBzud4nd2S79P/mU9p1lm0/t+ekUmkSTmyns2/GCp1MsSwXZWr/d4ApsRAdKzqNdtdrWi6SbbrcxA4jYkeYj2gqveShLWfECQkncXt1Hy6RxVIdXyfVuu8Az0/6Ta7/23gbiQbWixgcwN7prT5pSt2P0MfQsOXTqp0TciQEeGY7O7ByXuRezHiGtGDpFmcgAtmSdeL/WwjRUNMClEslswN2dntpvA54RKyrIVYNYdNOHbQ5xxn9bWVXKQVnwhQchJI1GYN9Px4Qqq5gUpSQkAElKSksoJDA6MxY6nY7RovalZlgJGUgeF0tdntm0OUlQZQ1L7CMlNnb/AC12uOwDPfwtGeIi0kFex02r/ph7TX7eq794tSbkB2KklIKRq4Lkvt68IpmJCyJYHhDDkW0DfjxUupYHUPyL2iyhWMyVNYXA4wZrW8JbV6qSTJJKc0w93cDUMLdIIXMSSCoP0tBHuApKfFc8A7dYX1UggtciH6oLzocHuzyvJ1agWSi3Ia97QsnzATYH85CCjJHAR0JPSBkFyaYWM4SaeFcGHGGVHLcBQ4RxWS2GkaT2bwtK0JJ0Zz3DxWNniU6nUNZFuKXS5KzZIJPKO1Ua0/ElP19I0FNOykoIAPSF+LVHi1382hgtFLOZqHuftAwu04Soh1SS/VvSJC/+JWeJ6xI7cF22X1/X+U29o3FhoIX4NMShEycvYZUjifwiDMSqkzElQIe9n2G8JDSrUm1kAueZswHO484h5zYXadlxbHYShaf5maNBhNWUBg1yD5adoGw3BlTVkDYuT0BP0A7iGNFQJ98b+FBzLPIbd79GgUYINpvUyxuG09gjMVWShyGWpmHPR/mrtHU+jTJkyQU5VKWADuHBZ+OgeC8NHv5hnqHhBPux6P6MIs9opngSdSlbp7JIDf8Ac0GruskSEPbF9fjXHyQ+IY+JScgLqAN+JZh2DvGfm1+hzOWveEmJTiqY2rb8Tv8AKCaSUHGYwHqFzqC1I9FHEwHuUwM0KO55besWfwy9kEcz+8HUE9KdEDqItmLDF0udnvBdvql3SkGgEoNIolmBJ4kfeOpWFKUqxJbZLkDqdBDKnkTJq2HgS1yBp9zDtYQhIlpDADTc9eJjtgKpJq3MwOUqpfZqWLzFnok36WENaeVIkg+7l+IDflANZiBTZLBtheKEYrM3QerH7RYBoSr2zyi3HHpdJ5/HlaT4dt9O0Z2ukF81vtHFTjamZIv94AlV6yfEPRmiC8cI2n0r47IwjE0qjwMFU0zKWI8o5kTvC4LtqOHaLZa98oiVz3E2CmdNICrpLH82i6bNItrzhbNqyAxISPzbeBlV/hyi/M/aJSgge42UD7R1APgBuoglWuj6Po5JP2hEmgCS5U/b7QyXRBSnJUSdeMXpwhbOApudvnC5jt10txk4jYGbkrXKGh3iSaBlAHQ6cILqkHN4uWl2gSdUlJyAuDcW/PwxxoZKI1znCgnkhBQGP7wdS4WpQzaP8ucTCUpm+K5YPeHlGzCGBSxNRqHMsDnuszVYQQXcX4fSAamgUN0+Yf0jT+0SfD0f5RiVVBe8VdQTeje+Vm615PBSWIcRqvY0eFQd0H4X1Daj1EZUyCvTaH3stKMsgqWwBIy6u/PsIoy9yLrQDAReU9xXDysW+Iac+R+kZee3vA/G4+kbGvq0hOukY/FAZi1LQkgcO2pbezwRyQ0DnEU7hM0T5bagcrRIzXjjyK9T3J38GP8AZFYTRTFLytqLngHB36Q9k0//ACyQHJJWoeafPxD1gurnhCPBbiwZ/vFhrErlWNxoBZzqx+rRwaAlZdS+SnVi0qp/5EllWWsl+IS/7RKaWVJWgDKLEkaAc+JuDAE+kmLmZpjj80SI0WG0x9yx1mEnsNO0cFeZzWN3Xk/f5IjCEpYBLhKSw6AN8hAXtDSqm2TYNc8By7fKL66f7kBCdQ5PlpBs1JCEg6keL9/zaL1eFnteWSCUd+P5XzXEKT3SgdUrDjkbZhyv847pZn9I7mHOO0w90h/0qI62/PKEqQToLcoW27XL0ccvVjBKZJQojwqB6RxJkLUoJClOTziiRmS9jGk9l6deZS1pIJFieF3I9BBRlKzv6TS7CcUdAEICdSAHPE8YTYpMXmZofL56asPzhETISq5FoLWFiRzbXF7srP0tAtTFw24f7axKmSoAAEE8AflBlcDLLJ0MFYdh5KxMXtdKemj92iKTJnob3cdln8co/dBOZXiIdQcBuQO+8LMPle9WEpULaqOg+8aT2qpkzReyhv8AcbiMnIJljKCATZyWt16wF4p3uWjpH9SC78S0EjD5SVgqUstuCA+3lB6sozZSSHOhv24iEi5LhIzk22tF3u/dbF+IMEAQHs3cusqqrQFLuSOt4YYJRJU5KnALcH77QurJwUHDPw0/aKZOJKlpygNqSesRYBRHRvfHtbytpKTLQWDdB9YB9ophEsN+o2PSAMEZYzFV9xvDHHJSDIObkRxJ5DnF7ws0R9OdocbyspNrFE6BoCrJiQsEhlC1ubGGMqiYAqOuw184W4xXpT/LQlyNTwPDrAHmm2Vvw05+1gTjCcdVL1Yp0Yn5RpsKqEzVPLdP+k3B6biPneH1ASl1h1PsHJeNr7NYmlIYobmwBPVotG+1n+0dMGtLmDKM9oicrEKzAHQPmtsRwjFSZGZTbk2jd1GNSlEpzZSNjZ+hGhhR7QzAhSVBs97pAfQC5H5eLuAKBoZHxjpltEqinorZUiyTc8TuekdfwZ8SX19NwYVy8QmH9WsWyqhSiEIcAnb16mO3BNGKSySUypKJTtMW/S7jqYazlS5aToN+frETJypzFsxslPDn5QhxeY5LlzF+Akmgzvq8e5Xf4kkaP2aJCwzE/wBI7xIrad6DPRMKCq95JyH4mcedhCL/ABJSCSkef2jQ1VEJSQlJuSxPLlCGsleNTcTA33SJpjG4k1gpp7M1Cp83+ZfUk8ANu5aNkhYBfskceQ8o+d4NWmTMcX1fm7faN/PT8KxcZSCOZFiPUd4tGcLP9px1KPQjCUVUrPPl3fxh/Nz53hrVFweZ+UASEr98lRBY3drMEnQi2vygxRZn4/X9ouEtKctHoEnx+XYptrmHUBozMmbfnGhxac67baeZhQunGZwNduDwN4zYWrpDtjpybYUhKlAHf5w/mESwTslOnX+8JMIl5TmI00hlVTfDl4jX87QQLP1A3SV2XdJMz8gbd4YBIlg6neAsERfMfhR6mK8cqHDJLZrPwvE2lXM3y7BwupMsKOddwDYfeBzUrmLICgGOg5aR7Wky0hKRYWH5z1hVTzCpTC13P3iEzHFuBd9PcnGKy0rCVK1ZiRsYytXJKVlP5pD9E7MCk7n56fnOF9dTOUkbFjzBuPqI5wtM6UmPwkqUVMBctBk+mSq5DDfnFTBNnsNIpm11mfrE8Ljvc6whMRoUJ0J+cLv4Qn9Vuhg4zUqWMytu0dCUx4QMtBTrHuYKKvw+p9wlrF/zQ2844lzJk6ZnWWTsHdug48+cczAk7/naCKealAswPE3PYRNIRoW4DxFW1oIsANPIc+AjIYxVBU1IAcXd93I06fWNBX1Gbwje6idT1jO1ssLmpSNR6PAZ8ignNAzabd6FHSqXQjT81hzJlqKRqOcL5a/dgB3/ADWHns+gqJKh4dRz/aCMACBqpCG7uwXFJg597nVoGZ97O/Mb+UX1qEFW6j5NflDOqKiW0AGsDIkBOkFDQszrucdzigxhgLeEX7t5waEplMzOd7ekXCoAB/NYz1fVus5bnjsNrcY40FaMSTGncI6rxFyEC6iQPM/a0FVOEO3JyepOnpCfBafLUpfgS54s/nGxqfgcXiG2eVXUu6Lmtj+7WXVSJ5fneJFkyaoExIsjhzvVMESAtIUqxSW9X+8IMQk5VKFi5PzeHeKr92hewSxHkoH7wilTlTQoGy2zEDYC1+Ci5tAyRwu0odRf2SiYg7RqsDxcFGRZ5Am7/wCkxnQCosDfQNxh1glBd1lhzYvbTkdPWKM5wm9WGOj8aZUtSozigEkMpxrfKTrBa1kqSDYs57X+kBUvhqJbOxB000NvSD1L/mKUeIHY/wBoIFkSjIodksxOhILncPbmYpoqXLfU7n+n/wDXyh3XqFidBZxtCqgfMU/p2ie6LHK4x5UUrMwBZz5xemQqYS/hQzeo06x3U0mWYlW1g0FVU4fCNQPSOQzJxt/8XU+oTLl5RoASfJ4z+FzDO94hWp8aTwL6dCI9qat819bRT7PzADmH6dfk/SKk5CYjh6cTj3XkiqXJVkWCpHA7dOHyg0pfxy2KCfwHmIPxajSsCYkOd4zkicuSSEByVNlZwoAPp0a8de1XjInbubh3dOlSPCSnceo2hXiCil1A2IBtBVFiSczeJCjqhVh2Oh6RfiFGlWljsfuInkYUNJjfT1n5lecv1gBU5RNoMNAoOk6cYtlJCdEvzP2ECpx5WkHMaPCLVFPQLXdj5Qf/AA3u+u5gvD5ileFm/aFeILKlFtBpz5xag0Wg73SP2nAXRmAngOP5pHdFRCYrwuxs50frAtPTsyphYcOMaamkFUsLYJH6RwAjmgnlVnkEQx8EhxGRk03LbaP/AHhNLlgqMwcWPMPrDH2jrbkIN2YcuJ+naFWH1AZncvo2kCkcC6k9p2v6W5O8Nwxc6ZdvdgAvvfblvG1w+lCbJGgZ9u0KMFfMlH9KXPMnU/Ido06RlDawwxtLz3tHUOLtvZLKks4N/wA3gKbNfWDqxJJ6whxdDrCQbAeupi5Krpmh5oqmapUxWVPwjXnZ9eEEUuHOpBFxd+0FSKYIlgDU3Pr94YSke7ljiR+8RSPJqKFM+H/aU1CgmchtjfuCIe0anBSdozyqcqW52IhzSuCXtq3OJQdS0FozlUTqAFRiQdTTQpIPH7xIlB6sgwg8eYhR4ZVdoxns/OZcxyxJZzxBBv3EbSqTmSpPVPY/jxhaSkP8RlNnsrqnfyHpC8uHArV9n0YXtKvxGmImkgFNweYNj+dI1lCkfw6To6nLbXu3KFi5Kps0ZRbQk6ABm/tzhjPqggZUWH5x3izW0Sq6mQyNazug0V6glSwNFjKOoOZuDiGqZiZiQsOHBcb+sZepxAoUoEZgS5Bt3BTB9PjEmagBYUjTxAXfi4uY4OF0ol0xIDgPoi5lQLp+L8EEYCnxM3MmM7PKwcyCFpfUWNuX7RpPZ7E0LSUNlmN5jlziQ6yhamIsiJbn9kTi00AHl9xGfXUEX3vfeCa1alZjoAR5Dh6QtXLWouEnKPWOJVtNCGtooOumkAtqfQfhhj7Fpf3w3KQB5wi9+82+9vt6w69nJglz72Cw3dwRAWm3WtDUsIgLRzVrY0tOEpyuT+fKB5VKlJKinKofCX26baCOlzVpW2ieJiupTm/Ub7hoZXnRuvJ5WaxxSVFThy/1hVT4lNlkDMVJ/pVfyOohnXS8mZz5wjmzxp9DC8mDa9HpmhzNtWFoJVUid8Byq3QfoeMDTQpJYiFEskEEd4dyKlU4MCFEcfiH1I6vFmvvBVZIunkcforErAQWLEhug3hTOqACyb8zpB1VRzCLqYHYffWK6fD+hMS6zwojMbRZKLpqVKUhczxKN+naL6zEFZBsDYDjtFtLQqICSzDfpx6QsxeelyXfZPHmf2ixwEBgEslHKQzvEoqi/C6Y8NTbuY8pkgqAO5c8gIboWlC0ttcdg7n0gDG2bWlLKWt2hanAqbxTF8DlHa30MN1gtAXs7/kIfUjMf+4kuYvxCuCE21Nhx6w0F5Gfc+YgfBD4lOShOY67DjCbCaUzVFR0APmYuXRKmDMskk+kOMKlBIyjY/nyjkwXiGIhpsoWYhj0YQVUyvCl9g/rHqpNyVaP/YCPZoLuf9v0iUuX2Ql5OUgWckeUdzp134wNXl1Hl+PC7/EAElJN45OMhLwCENMWtJICyA+gMSKV4ipywDcw/rHsUwtIMd6BPyfGv82jNYh/6lZ5f+IiRIrJ2QdF5nfD+FpcLPhSNrfOF9RqqPYkWHCAz+4UixIX7j6RcoWEexICOStX/Bq5kHwq/wCtMW0f+YOsSJEhVfwU1mG6vzaOjZFuKf8AyiRIJ2WeO3yWQqf809ftDY6J6CPIkAZyVrTcNWsnl5KSdWH0j2l+ERIkMrzh8p+KT4yke87/AEMIq9IfQRIkCkWxpOG/BEYmGlWt0hbhxaYgixzJuLbiJEgb/ME3D/bPzWwrB9YV0v8AmefyjyJDJWXD5CnyvgV0T6qEYDED44kSBTcJn2X5nL3D/j84Onn+YO8exIGzyp+Xz/JbHDT/AMkDu59IKlJBS5AJbXfziRIZC8xL5nf8ir0jw/nER7R/EYkSLpU+Uq6s+QgKm17GJEjlMfkQE74ZnSM/UC6u3yEexIqVsaXv9+iDiRIkUT6//9k="}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 701ms (ActiveRecord: 1.7ms | Allocations: 3096)
+
+
+Started POST "/users" for ::1 at 2020-02-05 14:04:58 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china", "password_confirmation"=>"[FILTERED]", "avatar"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 702ms (ActiveRecord: 1.4ms | Allocations: 3095)
+
+
+Started POST "/users" for ::1 at 2020-02-05 14:44:58 -0500
+Started POST "/users" for ::1 at 2020-02-05 14:45:38 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china", "password_confirmation"=>"[FILTERED]", "avatar"=>"data:image/jpeg;base64/"}}
+[31mUnpermitted parameter: :avatar[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (23.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 2114ms (ActiveRecord: 30.0ms | Allocations: 9300)
+
+
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 931ms (ActiveRecord: 41.5ms | Allocations: 9521)
+
+
+Started POST "/users" for ::1 at 2020-02-05 14:46:21 -0500
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china", "password_confirmation"=>"[FILTERED]"}, "user"=>{}}
+Completed 400 Bad Request in 91ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:20:in `user_params'
+app/controllers/users_controller.rb:3:in `create'
+Started POST "/users" for ::1 at 2020-02-05 14:47:03 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "country"=>"china", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 835ms (ActiveRecord: 2.4ms | Allocations: 3066)
+
+
+Started POST "/users" for ::1 at 2020-02-05 14:48:15 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "country"=>"china", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 811ms (ActiveRecord: 1.6ms | Allocations: 3066)
+
+
+Started POST "/users" for ::1 at 2020-02-05 14:49:23 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "country"=>"china", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Started POST "/users" for ::1 at 2020-02-05 14:51:29 -0500
+Completed 500 Internal Server Error in 125186ms (ActiveRecord: 0.0ms | Allocations: 243034)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `user_params'
+app/controllers/users_controller.rb:21:in `user_params'
+app/controllers/users_controller.rb:3:in `create'
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"angel@yahoo.com", "country"=>"china", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 1150ms (ActiveRecord: 26.0ms | Allocations: 1414799)
+
+
+Started POST "/users" for ::1 at 2020-02-05 14:52:25 -0500
+  [1m[35m (37.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"don", "email"=>"an@yahoo.com", "country"=>"china", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "an@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (13.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = $1[0m  [["authentication_token", "JzfzaunBf_bix-4RJL_m"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (12.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "country", "email", "password_digest", "created_at", "updated_at", "authentication_token") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "don"], ["country", "china"], ["email", "an@yahoo.com"], ["password_digest", "$2a$12$2uLyNDROOxMnhJ.AARGkLucCHPcLawKC2.ZjWf3u95Q6ZFabf6p46"], ["created_at", "2020-02-05 19:52:26.416995"], ["updated_at", "2020-02-05 19:52:26.416995"], ["authentication_token", "JzfzaunBf_bix-4RJL_m"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (56.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 200 OK in 904ms (Views: 1.0ms | ActiveRecord: 98.8ms | Allocations: 12554)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 14:54:11 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"an@yahoo.com", "password"=>"[FILTERED]", "session"=>{"email"=>"an@yahoo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "an@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 817ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 1180)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 14:57:44 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user_id"=>"3", "property"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "session"=>{"user_id"=>"3", "property"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 858)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 14:58:20 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"user_id"=>"3", "property"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 154)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 14:59:31 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 130)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 14:59:43 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"angel@yahoo.com", "password"=>"[FILTERED]", "session"=>{"email"=>"angel@yahoo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "angel@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 769ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 832)
+
+
+Started POST "/sessions" for ::1 at 2020-02-05 15:00:32 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "property"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "session"=>{"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "property"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 851)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:01:14 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "property"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:03:22 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "property"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}}
+Completed 500 Internal Server Error in 560ms (ActiveRecord: 0.0ms | Allocations: 80405)
+
+
+  
+NameError (undefined local variable or method `decoded' for #<PropertiesController:0x000055eaa0f1d4a8>
+Did you mean?  decoded_token):
+  
+app/controllers/application_controller.rb:10:in `authorize_request'
+Started POST "/properties" for ::1 at 2020-02-05 15:04:03 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "property"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+Completed 400 Bad Request in 67ms (ActiveRecord: 10.8ms | Allocations: 8576)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: properties):
+  
+app/controllers/properties_controller.rb:25:in `prop_params'
+app/controllers/properties_controller.rb:8:in `create'
+Started POST "/properties" for ::1 at 2020-02-05 15:04:24 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{"user_id"=>"3"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.5ms | Allocations: 2997)
+
+
+  
+NoMethodError (undefined method `build' for #<Class:0x000055eaa0649fc0>):
+  
+app/controllers/properties_controller.rb:8:in `create'
+Started POST "/properties" for ::1 at 2020-02-05 15:05:01 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{"user_id"=>"3"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+Completed 422 Unprocessable Entity in 191ms (ActiveRecord: 21.0ms | Allocations: 18124)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:06:16 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{"user_id"=>"3"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+Completed 422 Unprocessable Entity in 88ms (ActiveRecord: 18.5ms | Allocations: 14691)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:06:46 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{"user_id"=>"3"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+Completed 422 Unprocessable Entity in 102ms (ActiveRecord: 15.4ms | Allocations: 14693)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:08:45 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "user_id"=>"3", "properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{"user_id"=>"3"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[36mProperty Create (72.3ms)[0m  [1m[32mINSERT INTO "properties" ("user_id", "name", "category", "description", "price", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["name", "nice house"], ["category", "duplex"], ["description", "an awesome house"], ["price", "123"], ["location", "Egypt"], ["created_at", "2020-02-05 20:08:45.798050"], ["updated_at", "2020-02-05 20:08:45.798050"]]
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[35m (15.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+Completed 201 Created in 220ms (Views: 0.7ms | ActiveRecord: 106.9ms | Allocations: 19563)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:09:38 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"token"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1ODEwMTkxODR9.D4XlULZZYAUmqMBoxd0WkVKw6Ah6xk9GlKFhpyer75Y", "properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[36mProperty Create (0.9ms)[0m  [1m[32mINSERT INTO "properties" ("user_id", "name", "category", "description", "price", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["name", "nice house"], ["category", "duplex"], ["description", "an awesome house"], ["price", "123"], ["location", "Egypt"], ["created_at", "2020-02-05 20:09:38.629815"], ["updated_at", "2020-02-05 20:09:38.629815"]]
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[35m (15.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+Completed 201 Created in 37ms (Views: 0.7ms | ActiveRecord: 17.5ms | Allocations: 3397)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:10:02 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[36mProperty Create (33.6ms)[0m  [1m[32mINSERT INTO "properties" ("user_id", "name", "category", "description", "price", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["name", "nice house"], ["category", "duplex"], ["description", "an awesome house"], ["price", "123"], ["location", "Egypt"], ["created_at", "2020-02-05 20:10:02.509141"], ["updated_at", "2020-02-05 20:10:02.509141"]]
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[35m (156.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+Completed 201 Created in 211ms (Views: 1.1ms | ActiveRecord: 190.9ms | Allocations: 3400)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:12:38 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[36mProperty Create (27.7ms)[0m  [1m[32mINSERT INTO "properties" ("user_id", "name", "category", "description", "price", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["name", "nice house"], ["category", "duplex"], ["description", "an awesome house"], ["price", "123"], ["location", "Egypt"], ["created_at", "2020-02-05 20:12:39.127514"], ["updated_at", "2020-02-05 20:12:39.127514"]]
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[35m (52.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+Completed 201 Created in 153ms (Views: 1.3ms | ActiveRecord: 96.1ms | Allocations: 16919)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:13:05 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[36mProperty Create (1.1ms)[0m  [1m[32mINSERT INTO "properties" ("user_id", "name", "category", "description", "price", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["name", "nice house"], ["category", "duplex"], ["description", "an awesome house"], ["price", "123"], ["location", "Egypt"], ["created_at", "2020-02-05 20:13:06.103716"], ["updated_at", "2020-02-05 20:13:06.103716"]]
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+Completed 201 Created in 96ms (Views: 1.3ms | ActiveRecord: 36.7ms | Allocations: 17132)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:13:15 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 138ms (ActiveRecord: 25.8ms | Allocations: 19028)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:16:03 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house", "images"=>"data:image/jpeg;base64,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"}, "property"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+[31mUnpermitted parameter: :images[0m
+Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 0.5ms | Allocations: 2007)
+
+
+Started POST "/properties" for ::1 at 2020-02-05 15:16:23 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house", "images"=>"data:image/jpeg;base64,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"}, "property"=>{}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize_request'
+[31mUnpermitted parameter: :images[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[36mProperty Create (35.7ms)[0m  [1m[32mINSERT INTO "properties" ("user_id", "name", "category", "description", "price", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["name", "nice house"], ["category", "duplex"], ["description", "an awesome house"], ["price", "123"], ["location", "Egypt"], ["created_at", "2020-02-05 20:16:25.784176"], ["updated_at", "2020-02-05 20:16:25.784176"]]
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:9:in `create'
+Completed 201 Created in 144ms (Views: 1.3ms | ActiveRecord: 79.0ms | Allocations: 17158)
+
+

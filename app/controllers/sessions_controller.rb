@@ -4,9 +4,10 @@ class SessionsController < ApplicationController
 		if user&.authenticate(params[:password])
 			token = JsonWebToken.encode(user_id: user.id)
 			time = Time.now + 24.hours.to_i
+			# response.headers["Authorization"] = `#{token}`
 			render json: {token: token, time: time, user_id: user.id}, status: :ok
 		else
-			render json: params[:email], status: :unauthorized
+			render json: {error: "username or password not found"}, status: :unauthorized
 		end
   end
 	def destroy 

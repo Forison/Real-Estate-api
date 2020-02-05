@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :properties
+  has_one_attached :avatar, dependent: :destroy
   acts_as_token_authenticatable
   before_save { self.email = email.downcase }
   validates :username, presence:true, length:{maximum:20}
@@ -10,9 +12,4 @@ class User < ApplicationRecord
     has_secure_password
     validates :password, presence: true, length: { minimum: 5 }
     validates :password_confirmation , presence:true, length: { minimum:5 }
-
-    def User.digest(string)
-      cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
-      BCrypt::Password.create(string, cost: cost)
-    end
 end
