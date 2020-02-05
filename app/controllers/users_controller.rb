@@ -2,11 +2,13 @@ class UsersController < ApplicationController
 	def create
 	  new_user = User.new(user_params)
 	  if new_user.save
-	    render json: new_user, status: :ok
+	    token = JsonWebToken.encode(user_id: new_user.id)
+			time = Time.now + 24.hours.to_i
+			render json: {token: token, time: time, user_id:new_user.id}, status: :ok
 	  else
 		head(:unprocessable_entity)
 	  end
-    end
+  end
 	def destroy
 		old_user = User.find(params[:id])
 		if old_user.save
@@ -17,7 +19,6 @@ class UsersController < ApplicationController
 	end
 	private
 	def user_params
-		# debugger
-		params.require(:user).permit(:username, :email, :country, :password, :password_confirmation)
+		params.require(:user).permit(:username, :email, :country, :password, :password_confirmation, :avatar)
 	end
 end

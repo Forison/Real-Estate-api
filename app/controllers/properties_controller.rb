@@ -22,6 +22,6 @@ class PropertiesController < ApplicationController
   end
 	private
 	def prop_params
-		params.require(:properties).permit(:user_id, :name,:category,:price,:location, :description);
+		params.require(:properties).permit(:user_id, :name,:category,:price,:location, :description, :images);
 	end
 end
