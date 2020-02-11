@@ -2791,3 +2791,7 @@ Processing by UsersController#create as */*
 Completed 200 OK in 743ms (Views: 0.7ms | ActiveRecord: 22.7ms | Allocations: 4859)
 
 
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
