@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 	  if new_user.save
 	    token = JsonWebToken.encode(user_id: new_user.id)
 			time = Time.now + 24.hours.to_i
-			render json: {token: token, time: time, user_id:new_user.id}, status: :ok
+			render json: {token: token, time: time}, status: :ok
 	  else
 		head(:unprocessable_entity)
 	  end
