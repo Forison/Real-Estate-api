@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :properties
+  has_many :houses
   has_one_attached :avatar, dependent: :destroy
   acts_as_token_authenticatable
   before_save { self.email = email.downcase }

@@ -1,7 +1,6 @@
-class Property < ApplicationRecord
+class House < ApplicationRecord
   belongs_to :user
   has_many_attached :images, dependent: :destroy
-
   validates :name, presence:true
   validates :category, presence:true
   validates :description, presence:true

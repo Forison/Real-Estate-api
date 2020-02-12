@@ -1,6 +1,6 @@
-class CreateProperties < ActiveRecord::Migration[6.0]
+class CreateHouses < ActiveRecord::Migration[6.0]
   def change
-    create_table :properties do |t|
+    create_table :houses do |t|
       t.references :user, null: false, foreign_key: true
       t.string :name
       t.string :category
