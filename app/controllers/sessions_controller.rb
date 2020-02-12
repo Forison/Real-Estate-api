@@ -9,13 +9,6 @@ class SessionsController < ApplicationController
 			render json: {error: "username or password not found"}, status: :unauthorized
 		end
 	end
-	def login_user
-		if @current_user
-		render json: {user: @current_user}, status: :ok
-		else
-		head(:unauthorized)
-		end
-	end
 	def destroy 
 	end
 end

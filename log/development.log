@@ -2795,3 +2795,36 @@ DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed i
  (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
 DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
  (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/addo/.rbenv/versions/2.5.1/bin/rake:23)
+Started GET "/login_user" for ::1 at 2020-02-12 02:57:15 -0500
+  [1m[35m (69.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CurrentsController#login_user as */*
+  Parameters: {"current"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 374)
+
+
+Started GET "/login_user" for ::1 at 2020-02-12 02:58:13 -0500
+Processing by CurrentsController#login_user as */*
+  Parameters: {"current"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 190)
+
+
+Started GET "/login_user" for ::1 at 2020-02-12 03:25:24 -0500
+Processing by CurrentsController#login_user as */*
+  Parameters: {"current"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 76ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started POST "/properties" for ::1 at 2020-02-12 03:57:56 -0500
+Processing by PropertiesController#create as */*
+  Parameters: {"properties"=>{"name"=>"nice house", "category"=>"duplex", "price"=>"123", "location"=>"Egypt", "description"=>"an awesome house"}, "property"=>{}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 172.7ms | Allocations: 225)
+
+
