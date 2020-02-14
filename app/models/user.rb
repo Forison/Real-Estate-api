@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :houses
   has_one_attached :avatar, dependent: :destroy
-  validates_attachment_presence :avatar
+  # validates_attachment_presence :avatar
   acts_as_token_authenticatable
   before_save { self.email = email.downcase }
   validates :username, presence:true, length:{maximum:20}
