@@ -22,6 +22,6 @@ before_action :authorize_request
   end
 	private
 	def prop_params
-		params.require(:houses).permit(:user_id, :name,:category,:price,:location, :description, :images);
+		params.require(:houses).permit(:user_id, :name,:category,:price,:location, :description, :images[]);
 	end
 end
