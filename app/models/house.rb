@@ -6,5 +6,4 @@ class House < ApplicationRecord
   validates :description, presence:true
   validates :price, presence:true
   validates :location, presence:true
-  validates :images, presence:true
 end
