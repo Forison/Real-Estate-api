@@ -17,8 +17,9 @@ class UsersController < ApplicationController
 			head(:unprocessable_entity)
 		end
 	end
+	
 	private
 	def user_params
-		params.require(:user).permit(:username, :email, :country, :password, :password_confirmation, :avatar)
+		params.require(:user).permit(:username,:email,:country,:password ,:password_confirmation,:picture)
 	end
 end
