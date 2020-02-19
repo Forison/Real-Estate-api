@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateHouses < ActiveRecord::Migration[6.0]
   def change
     create_table :houses do |t|
@@ -7,6 +9,7 @@ class CreateHouses < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :price
       t.string :location
+      t.string :pictures
 
       t.timestamps
     end

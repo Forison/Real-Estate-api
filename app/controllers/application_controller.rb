@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::API
   def authorize_request
     header = request.headers['Authorization']
-    if header
-      token = header.split(' ').last
-    end
+    token = header.split(' ').last if header
     begin
       decoded_token = JsonWebToken.decode(token)
       @current_user = User.find(decoded_token[:user_id])

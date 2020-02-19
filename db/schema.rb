@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_18_102149) do
+ActiveRecord::Schema.define(version: 2020_02_12_111425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,12 +22,9 @@ ActiveRecord::Schema.define(version: 2020_02_18_102149) do
     t.string "description"
     t.string "price"
     t.string "location"
+    t.string "pictures"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "images_file_name"
-    t.string "images_content_type"
-    t.integer "images_file_size"
-    t.datetime "images_updated_at"
     t.index ["user_id"], name: "index_houses_on_user_id"
   end
 
@@ -35,15 +32,12 @@ ActiveRecord::Schema.define(version: 2020_02_18_102149) do
     t.string "username"
     t.string "country"
     t.string "email"
+    t.string "picture"
     t.string "password_digest"
     t.string "password_confirmation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "authentication_token", limit: 30
-    t.string "picture_file_name"
-    t.string "picture_content_type"
-    t.integer "picture_file_size"
-    t.datetime "picture_updated_at"
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
   end
 
