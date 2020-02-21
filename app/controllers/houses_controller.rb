@@ -28,6 +28,6 @@ class HousesController < ApplicationController
   private
 
   def prop_params
-    params.require(:houses).permit(:user_id, :name, :category, :price, :location, :description, pictures: [])
+    params.require(:houses).permit(:user_id, :name, :category, :price, :location, :description, :pictures)
     end
 end
