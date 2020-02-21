@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :sessions, only: %i[create destroy]
   get '/login_user', to: 'currents#login_user'
   get '/is_user_login', to: 'currents#is_user_login?'
+  get '/user_id', to: 'currents#user_id'
 end

@@ -22,4 +22,12 @@ class CurrentsController < ApplicationController
       render json: { isLogin: false }, status: :unauthorized
     end
   end
+
+  def user_id
+    if @current_user
+      render json: { userid: @current_user.id }, status: :ok
+    else
+      render json: { userid: 'unknown' }, status: :unauthorized
+    end
+  end
 end
