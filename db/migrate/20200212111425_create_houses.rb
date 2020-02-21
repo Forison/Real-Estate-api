@@ -9,7 +9,7 @@ class CreateHouses < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :price
       t.string :location
-      t.string :pictures
+      t.string :pictures, array: true, default: []
 
       t.timestamps
     end

@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_02_12_111425) do
     t.string "description"
     t.string "price"
     t.string "location"
-    t.string "pictures"
+    t.string "pictures", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_houses_on_user_id"
