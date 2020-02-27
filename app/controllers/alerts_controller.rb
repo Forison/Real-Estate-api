@@ -2,7 +2,7 @@ class AlertsController < ApplicationController
 	 def create 
 		alerts = Alert.new(alert_params)
     if alerts.save
-      render json: alerts, status: :created
+      head(:ok)
     else
       head(:unprocessable_entity)
     end
