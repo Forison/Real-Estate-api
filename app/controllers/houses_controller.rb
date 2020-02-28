@@ -18,11 +18,7 @@ class HousesController < ApplicationController
   
   def show
     house = House.find(params[id])
-    if houses
-      render json: house, status: :ok
-    else
-      head(:unprocessable_entity)
-    end 
+    render json: house, status: :ok
   end
 
   def destroy
