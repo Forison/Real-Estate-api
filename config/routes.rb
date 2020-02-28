@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'seller', to: 'get_users#show'
+  get '/seller', to: 'get_users#show'
   resources :houses
   resources :users, only: %i[create destroy]
   resources :sessions, only: %i[create destroy]
