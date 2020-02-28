@@ -14,7 +14,16 @@ class HousesController < ApplicationController
     else
       head(:unprocessable_entity)
     end
-   end
+  end
+  
+  def show
+    house = House.find(params[id])
+    if houses
+      render json: house, status: :ok
+    else
+      head(:unprocessable_entity)
+    end 
+  end
 
   def destroy
     house = House.find(params[:id])
