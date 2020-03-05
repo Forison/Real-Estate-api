@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  has_many :favorites, dependent: :destroy
   has_many :houses, dependent: :destroy
   acts_as_token_authenticatable
   before_save { self.email = email.downcase }

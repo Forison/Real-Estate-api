@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :favorites, only: %i[index create]
   resources :sellers, only: %i[index show]
   resources :houses
   resources :users, only: %i[create destroy]
