@@ -15,7 +15,7 @@ class HousesController < ApplicationController
       head(:unprocessable_entity)
     end
   end
-  
+
   def show
     house = House.find(params[:id])
     render json: house, status: :ok
