@@ -7,12 +7,12 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-Rails.application.config.middleware.insert_before 0, Rack::Cors do
-  allow do
-    origins 'https://frozen-bastion-98066.herokuapp.com/'
+# Rails.application.config.middleware.insert_before 0, Rack::Cors do
+#   allow do
+#     origins 'https://frozen-bastion-98066.herokuapp.com/'
 
-    resource 'https://frozen-bastion-98066.herokuapp.com/signUp',
-      headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
-  end
-end
+#     resource 'https://frozen-bastion-98066.herokuapp.com/signUp',
+#       headers: :any,
+#       methods: [:get, :post, :put, :patch, :delete, :options, :head]
+#   end
+# end
