@@ -10,9 +10,9 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins 'https://frozen-bastion-98066.herokuapp.com/'
-    resource '*',
-             headers: :any,
-             methods: %i[get post put ],
-             credentials: true
+
+    resource 'https://frozen-bastion-98066.herokuapp.com/signUp',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
