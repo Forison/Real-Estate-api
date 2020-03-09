@@ -19,6 +19,10 @@ class CurrentsController < ApplicationController
   def user_homes
     render json: { isLogin: @current_user.houses }, status: :ok
   end
+  def categorize
+    houses = House.where(category: params[:category])
+    render json: houses, status: :ok
+  end
   def is_user_login?
     if @current_user
       render json: { isLogin: true }, status: :ok
