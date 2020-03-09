@@ -17,8 +17,9 @@ class CurrentsController < ApplicationController
   end
 
   def user_homes
-    render json: { isLogin: @current_user.houses }, status: :ok
+    render json: { asSeller: @current_user.houses }, status: :ok
   end
+
   def is_user_login?
     if @current_user
       render json: { isLogin: true }, status: :ok
