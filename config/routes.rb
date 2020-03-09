@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   get '/is_user_login', to: 'currents#is_user_login?'
   get '/user_id', to: 'currents#user_id'
   get 'category/:category', to: 'currents#categorize'
+  get '/user_homes', to: 'currents#user_homes'
+  get '/uploader_homes', to: 'currents#user_homes'
   resources :alerts, only: %i[create]
 end
