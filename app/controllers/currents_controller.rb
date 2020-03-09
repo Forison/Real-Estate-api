@@ -5,6 +5,7 @@ class CurrentsController < ApplicationController
   def login_user
     if @current_user
       render json: {
+        id: @current_user.id,
         username: @current_user.username,
         country: @current_user.country,
         email: @current_user.email,
