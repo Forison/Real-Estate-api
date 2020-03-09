@@ -20,6 +20,10 @@ class HousesController < ApplicationController
     house = House.find(params[:id])
     render json: house, status: :ok
   end
+  def categorize
+    houses = House.where(category: params[:category])
+    render json: houses, status: :ok
+  end
 
   def destroy
     house = House.find(params[:id])
