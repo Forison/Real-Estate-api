@@ -23,16 +23,23 @@ class HousesController < ApplicationController
 
   def destroy
     house = House.find(params[:id])
-    if houses.save
+    if house.save
       head(:ok)
     else
       head(:unprocessable_entity)
-      end
-   end
+    end
+  end
 
   private
 
   def prop_params
-    params.require(:house).permit(:user_id, :name, :category, :price, :location, :description, pictures: [])
-    end
+    params.require(:house).permit(
+      :user_id, 
+      :name,
+      :category,
+      :price, 
+      :location,
+      :description,
+      pictures: [] )
+  end
 end

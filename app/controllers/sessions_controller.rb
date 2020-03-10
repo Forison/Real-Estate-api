@@ -8,7 +8,9 @@ class SessionsController < ApplicationController
       time = Time.now + 24.hours.to_i
       render json: { token: token, time: time }, status: :ok
     else
-      render json: { error: 'username or password not found' }, status: :unauthorized
+      render json:
+       { error: 'username or password not found' },
+       status: :unauthorized
     end
   end
 

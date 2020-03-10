@@ -30,7 +30,7 @@ class CurrentsController < ApplicationController
     render json: houses, status: :ok
   end
 
-  def is_user_login?
+  def user_login?
     if @current_user
       render json: { isLogin: true }, status: :ok
     else

@@ -3,8 +3,8 @@
 class SellersController < ApplicationController
   before_action :authorize_request
   def index
-    sellerId = House.pluck('user_id')
-    seller = User.find(sellerId)
+    sel = House.pluck('user_id')
+    seller = User.find(sel)
     render json: seller, status: :ok
   end
 
