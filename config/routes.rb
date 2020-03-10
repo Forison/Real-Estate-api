@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[create destroy]
   resources :sessions, only: %i[create destroy]
   get '/login_user', to: 'currents#login_user'
-  get '/is_user_login', to: 'currents#is_user_login?'
+  get '/is_user_login', to: 'currents#user_login?'
   get '/user_id', to: 'currents#user_id'
   get 'category/:category', to: 'currents#categorize'
   get '/user_homes', to: 'currents#user_homes'
