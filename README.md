@@ -1,24 +1,28 @@
-# README
+## Introduction
+This is a public Api, built to serve as a backend for the real estate project. A project that student have to do as the last project in the main Microverse curriculum, based on the consept of software as a service.
+ 
+## App description
+The app allows authenticated users to access information about properties they seek to sell online and also allow users to make contact with estate agent to purchase a property.
+This is the backend component which is expected to run on a react front end api.
+The backend has different routes needed by the front end to accepts specific resources
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Base url
 
-Things you may want to cover:
+#### https://myestateapi.herokuapp.com/
 
-* Ruby version
+Responds with JSON response
 
-* System dependencies
+## Technologies
 
-* Configuration
+- Ruby on rails
 
-* Database creation
+## Author
 
-* Database initialization
+👤 **Addo Forison**
 
-* How to run the test suite
+> This app is still under construction and not every feature has been fully implemented.
+No test has been done yet.
+This is only being submitted so I can move on to other tasks since the application meets the basic requirement requirement.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Reviewers
+pending !!!
