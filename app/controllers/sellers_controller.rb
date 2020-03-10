@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class SellersController < ApplicationController
   before_action :authorize_request
   def index

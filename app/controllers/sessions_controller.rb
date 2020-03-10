@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:email])
@@ -10,7 +8,7 @@ class SessionsController < ApplicationController
     else
       render json:
        { error: 'username or password not found' },
-       status: :unauthorized
+             status: :unauthorized
     end
   end
 

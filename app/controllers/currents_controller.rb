@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class CurrentsController < ApplicationController
   before_action :authorize_request
   def login_user

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class HousesController < ApplicationController
   before_action :authorize_request
   def index
@@ -34,12 +32,13 @@ class HousesController < ApplicationController
 
   def prop_params
     params.require(:house).permit(
-      :user_id, 
+      :user_id,
       :name,
       :category,
-      :price, 
+      :price,
       :location,
       :description,
-      pictures: [] )
+      pictures: []
+    )
   end
 end

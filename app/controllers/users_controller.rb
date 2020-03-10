@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class UsersController < ApplicationController
   def create
     new_user = User.new(user_params)
@@ -29,6 +27,7 @@ class UsersController < ApplicationController
       :email,
       :country,
       :password,
-      :picture )
+      :picture
+    )
   end
 end
