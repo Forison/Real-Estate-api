@@ -1,5 +1,5 @@
 class HousesController < ApplicationController
-  before_action :authorize_request
+  before_action :authorize_request, only: [:create, :show]
   def index
     all_houses = House.all
     render json: all_houses, status: :ok
