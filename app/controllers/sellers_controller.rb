@@ -1,5 +1,4 @@
 class SellersController < ApplicationController
-  before_action :authorize_request
   def index
     sel = House.pluck('user_id')
     seller = User.find(sel)
