@@ -12,6 +12,23 @@ The backend has different routes needed by the front end to accepts specific res
 
 Responds with JSON response
 
+## Usage
+
+> Clone the repository to your local machine
+
+```sh
+$ git clone https://github.com/forison/Real-estate-api.git
+```
+> cd into the directory
+
+```sh
+$ cd Real-estae-api
+```
+
+```sh
+$ rails s
+```
+
 ## Technologies
 
 - Ruby on rails
