@@ -11,5 +11,4 @@ class SessionsController < ApplicationController
              status: :unauthorized
     end
   end
-
 end
