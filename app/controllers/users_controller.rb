@@ -10,15 +10,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-    old_user = User.find(params[:id])
-    if old_user.save
-      head(:ok)
-    else
-      head(:unprocessable_entity)
-    end
-  end
-
   private
 
   def user_params
