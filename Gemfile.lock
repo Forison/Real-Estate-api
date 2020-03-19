@@ -66,6 +66,7 @@ GEM
       climate_control (>= 0.0.3, < 1.0)
     concurrent-ruby (1.1.5)
     crass (1.0.6)
+    database_cleaner (1.8.3)
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -219,6 +220,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
+  database_cleaner
   factory_bot_rails
   image_processing (~> 1.2)
   jwt
