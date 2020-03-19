@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :house do
     name { 'MyString' }
-    category { 'some category' }
-    description { 'some category' }
+    category { 'duplex' }
+    description { 'an awesome house' }
     price { '12222222' }
     location { 'Ghana' }
     sequence(:user_id) { |n| n }
