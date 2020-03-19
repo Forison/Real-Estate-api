@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'api request made via sessions_controller', type: :request do
-  before (:all) do
-    user = create(:user, email: 'tester@example.com')
+  before(:all) do
+    create(:user, email: 'tester@example.com')
   end
   describe 'login a user' do
     it 'if sign up is successful' do
