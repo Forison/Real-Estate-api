@@ -19,17 +19,8 @@ class HousesController < ApplicationController
     render json: house, status: :ok
   end
 
-  def destroy
-    house = House.find(params[:id])
-    if house.save
-      head(:ok)
-    else
-      head(:unprocessable_entity)
-    end
-  end
-
   private
-
+  
   def prop_params
     params.require(:house).permit(
       :user_id,
