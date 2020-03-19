@@ -20,7 +20,7 @@ class HousesController < ApplicationController
   end
 
   private
-  
+
   def prop_params
     params.require(:house).permit(
       :user_id,

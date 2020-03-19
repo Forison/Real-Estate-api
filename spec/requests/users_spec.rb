@@ -1,8 +1,8 @@
 require 'rails_helper'
 RSpec.describe 'api request made via users_controller', type: :request do
   include ApiHelper
-  
-	describe 'post myestateapi/users with complete params' do
+
+  describe 'post myestateapi/users with complete params' do
     before do
       post '/users',
            params: { user: {
