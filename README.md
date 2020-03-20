@@ -55,6 +55,9 @@ $ rspec
 
 👤 **Addo Forison**
 
+## Contact
+[LinkedIn](https://www.linkedin.com/in/forison/) | [Twitter](https://twitter.com/addo_forison)
+
 > This app is still under construction and not every feature has been fully implemented.
 No test has been done yet.
 This is only being submitted so I can move on to other tasks since the application meets the basic requirement requirement.
