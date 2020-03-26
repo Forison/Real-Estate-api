@@ -31,7 +31,7 @@ RSpec.describe 'api request made via users_controller', type: :request do
            } }
     end
 
-    it 'successful user creation' do
+    it 'unsuccessful user creation' do
       expect(response).to have_http_status(:unprocessable_entity)
     end
   end
@@ -48,7 +48,7 @@ RSpec.describe 'api request made via users_controller', type: :request do
            } }
     end
 
-    it 'successful user creation' do
+    it 'unsuccessful user creation' do
       expect(response).to have_http_status(:unprocessable_entity)
     end
   end
@@ -65,7 +65,7 @@ RSpec.describe 'api request made via users_controller', type: :request do
            } }
     end
 
-    it 'successful user creation' do
+    it 'unsuccessful user creation' do
       expect(response).to have_http_status(:unprocessable_entity)
     end
   end
@@ -82,7 +82,7 @@ RSpec.describe 'api request made via users_controller', type: :request do
            } }
     end
 
-    it 'successful user creation' do
+    it 'unsuccessful user creation' do
       expect(response).to have_http_status(:unprocessable_entity)
     end
   end
@@ -99,7 +99,7 @@ RSpec.describe 'api request made via users_controller', type: :request do
            } }
     end
 
-    it 'successful user creation' do
+    it 'unsuccessful user creation' do
       expect(response).to have_http_status(:unprocessable_entity)
     end
   end
