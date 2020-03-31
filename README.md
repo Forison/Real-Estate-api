@@ -39,8 +39,12 @@ api calls are currently accessed via the following ressources:
   
   ```resources :alerts, only: %i[create]```
 
-each return a JSON response
-More resources can be added as the front evolves
+each returns a JSON response
+
+## Potential Feature
+
+More resources can be added as the front evolves.
+
 ## Usage
 
 > Clone the repository to your local machine
