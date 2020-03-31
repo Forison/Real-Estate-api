@@ -14,16 +14,29 @@ The backend has different routes needed by the front end to accepts specific res
 
 ## Features
 api calls are currently accessed via the following ressources:
+  
   ```resources :sellers, only: %i[index show]```
+
+
   ```resources :houses```
+  
+  
   ```resources :users, only: %i[create]```
+  
   ```resources :sessions, only: %i[create]```
+  
   ```get '/login_user', to: 'currents#login_user'```
+  
   ```get '/is_user_login', to: 'currents#user_login?'```
+  
   ```get '/user_id', to: 'currents#user_id'```
+  
   ```get 'category/:category', to: 'currents#categorize'```
+  
   ```get '/user_homes', to: 'currents#user_homes'```
+  
   ```get '/uploader_homes/:id', to: 'currents#user_homes'```
+  
   ```resources :alerts, only: %i[create]```
 
 each return a JSON response
