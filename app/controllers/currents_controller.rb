@@ -1,5 +1,5 @@
 class CurrentsController < ApplicationController
-  before_action :authorize_request, except: [:categorize]
+  before_action :authorize_request, except: [:categorize, :find_a_user]
   def login_user
     if @current_user
       render json: {
