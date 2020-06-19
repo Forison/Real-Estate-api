@@ -11,7 +11,8 @@ class FavoritesController < ApplicationController
     if favorites.save
       head(:ok)
     else
-      head(:unprocessable_entity)
+      # head(:unprocessable_entity)
+      render json: favorites, status: :unprocessable_entity
     end
   end
 
