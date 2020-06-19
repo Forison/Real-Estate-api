@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get 'category/:category', to: 'currents#categorize'
   get '/user_homes', to: 'currents#user_homes'
   get '/uploader_homes/:id', to: 'currents#user_homes'
+  get '/wanted_user/:id', to: 'currents#find_a_user'
   resources :alerts, only: %i[create]
 end

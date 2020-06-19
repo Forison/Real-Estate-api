@@ -43,4 +43,8 @@ class CurrentsController < ApplicationController
       render json: { userid: 'unknown' }, status: :unauthorized
     end
   end
+  def find_a_user
+    wanted_user = User.where(id: params[:id])
+    render json: wanted_user, status: :ok
+  end
 end
