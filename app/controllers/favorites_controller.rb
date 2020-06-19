@@ -1,10 +1,5 @@
 class FavoritesController < ApplicationController
   before_action :authorize_request
-  def index
-    favorites = Favorite.pluck('myfavorite')
-    fav_house = House.find(favorites)
-    render json: fav_house, status: :ok
-  end
 
   def create
     favorites = @current_user.favorites.build(fav_params)
@@ -13,6 +8,10 @@ class FavoritesController < ApplicationController
     else
       head(:unprocessable_entity)
     end
+  end
+  
+  def show
+    render json: @current_user.favorites.ids, status: :ok
   end
 
   private
