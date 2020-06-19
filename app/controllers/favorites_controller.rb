@@ -9,10 +9,10 @@ class FavoritesController < ApplicationController
   def create
     favorites = @current_user.favorites.build(fav_params)
     if favorites.save
-      head(:ok)
+      # head(:ok)
+      render json: favorites, status: :ok
     else
-      # head(:unprocessable_entity)
-      render json: favorites, status: :unprocessable_entity
+      head(:unprocessable_entity)
     end
   end
 
