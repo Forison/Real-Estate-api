@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get '/uploader_homes/:id', to: 'currents#user_homes'
   get '/wanted_user/:id', to: 'currents#find_a_user'
   resources :alerts, only: %i[create]
-  resources :favorites, only: %i[index create show destroy]
+  resources :favorites, only: %i[index create destroy]
+  get 'my_favorites/:id', to: 'favorites#myfavorite'
 end
