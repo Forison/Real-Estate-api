@@ -19,6 +19,11 @@ class HousesController < ApplicationController
     render json: house, status: :ok
   end
 
+  def my_favorite
+    my_fav = House.find([params[:id]])
+    render json: my_fav, status: :ok
+  end
+
   private
 
   def prop_params
