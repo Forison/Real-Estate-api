@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   before_action :authorize_request
   
   def index
-    render json: @current_user.favorites, status: :ok
+    render json: @current_user.favorites.house_id, status: :ok
   end
 
   def create
