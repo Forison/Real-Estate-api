@@ -14,9 +14,9 @@ class FavoritesController < ApplicationController
     end
   end
 
-  def my_favorite
-    my_fav = Favorite.all
-    render json: my_fav, status: :ok
+  def show
+    my_favorite = House.find([params[:id]])
+    render json: my_favorite, status: :ok
   end
 
   def destroy
