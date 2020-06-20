@@ -8,12 +8,17 @@ class FavoritesController < ApplicationController
   def create
     favorites = @current_user.favorites.build(fav_params)
     if favorites.save
-      head(:ok)
+      head(:created)
     else
       head(:unprocessable_entity)
     end
   end
 
+  def destroy
+    find_row = @current_user.favorites.where(house_id: params[:house_id]).ids
+    unfavored = Favorite.find(find_row).destroy
+    head(:ok)
+  end
   private
 
   def fav_params
