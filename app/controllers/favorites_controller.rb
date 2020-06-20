@@ -16,7 +16,7 @@ class FavoritesController < ApplicationController
 
   def destroy
     find_row = @current_user.favorites.where(house_id: params[:house_id]).ids
-    render json: find_row, status: :ok
+    render json: params[:house_id], status: :ok
     # Favorite.find(find_row).destroy
   end
   private
