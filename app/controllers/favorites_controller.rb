@@ -15,7 +15,7 @@ class FavoritesController < ApplicationController
   end
 
   def show
-    my_favorite = Favorite.find(params[:id])
+    # my_favorite = Favorite.find(params[:id])
     render json: params[:id], status: :ok
   end
 
