@@ -15,13 +15,8 @@ class HousesController < ApplicationController
   end
 
   def show
-    if [params[:id]].size <= 1
-      house = House.find(params[:id])
-      render json: house, status: :ok
-    else
-      house = House.find([params[:id]])
-      render json: house, status: :ok
-    end
+    house = House.find([params[:id]])
+    render json: house, status: :ok
   end
 
   private
