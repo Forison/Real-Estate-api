@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   resources :sellers, only: %i[index show]
   resources :houses
-  # get '/house?id[]=:id', to: 'houses#favorite'
+  get '/house?id[]=:id', to: 'houses#favorite'
   resources :users, only: %i[create]
   resources :sessions, only: %i[create destroy]
   get '/login_user', to: 'currents#login_user'
