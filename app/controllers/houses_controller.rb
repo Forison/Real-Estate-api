@@ -20,7 +20,7 @@ class HousesController < ApplicationController
   end
 
   def favorite
-    house = House.find([params[:id]])
+    house = House.find([params[:ids]])
     render json: house, status: :ok
   end
 
