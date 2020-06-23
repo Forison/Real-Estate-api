@@ -28,7 +28,6 @@ class HousesController < ApplicationController
 
   def prop_params
     params.require(:house).permit(
-      id: []
       :user_id,
       :name,
       :category,
