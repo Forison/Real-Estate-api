@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   resources :sellers, only: %i[index show]
   resources :houses
-  get '/my_favorite/:id', to: 'houses#favorite'
+  get '/houses?id[]=:id', to: 'houses#favorite'
   resources :users, only: %i[create]
   resources :sessions, only: %i[create destroy]
   get '/login_user', to: 'currents#login_user'
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'category/:category', to: 'currents#categorize'
   get '/user_homes', to: 'currents#user_homes'
   get '/uploader_homes/:id', to: 'currents#user_homes'
-  get '/wanted_user/:ids', to: 'currents#find_a_user'
+  get '/wanted_user/:id', to: 'currents#find_a_user'
   resources :alerts, only: %i[create]
   resources :favorites, only: %i[index create destroy]
 end
