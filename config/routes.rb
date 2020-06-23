@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/user_homes', to: 'currents#user_homes'
   get '/uploader_homes/:id', to: 'currents#user_homes'
   get '/wanted_user/:id', to: 'currents#find_a_user'
-  get '/my_favorite/:id', to: 'house#favorite'
+  get '/my_favorite/:id', to: 'houses#favorite'
   resources :alerts, only: %i[create]
   resources :favorites, only: %i[index create destroy]
 end
