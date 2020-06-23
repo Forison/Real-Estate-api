@@ -20,11 +20,8 @@ class HousesController < ApplicationController
   end
 
   def favorite
-    my_fav_house = []
-    [params[:id]].each do |n| 
-      my_fav_house << House.find(n)
-    end
-    render json: my_fav_house, status: :ok
+    house = House.find(params[:id])
+    render json: house, status: :ok
   end
 
   private
