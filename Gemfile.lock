@@ -158,6 +158,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.2.1)
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -230,6 +231,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.2, >= 6.0.2.1)
+  redis (~> 4.0)
   rspec-rails
   shoulda
   simple_token_authentication (~> 1.0)
