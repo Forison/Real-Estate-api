@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/wanted_user/:id', to: 'currents#find_a_user'
   resources :alerts, only: %i[create]
   resources :favorites, only: %i[index create destroy]
+  mount ActionCable.server => '/cable'
 end
