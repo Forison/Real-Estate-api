@@ -1,7 +1,6 @@
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
     identified_by :current_user
-    SECRET_KEY = Rails.application.secrets.secret_key_base.to_s
 
     def connect 
       self.current_user = verify_user(request.params[:token])
@@ -10,13 +9,12 @@ module ApplicationCable
 
     private 
     def decode(token)
-      decoded = JWT.decode(token, SECRET_KEY)
-      HashWithIndifferentAccess.new decoded
+      JsonWebToken.decode(token)
     end
 
     def verify_user(token)
-      decode_token  = decode(token)
-      auth_user = User.find(decode_token)
+      decoded_token  = decode(token)
+      auth_user = User.find(decoded_token)
       if !auth_user.nil?
         return auth_user
       else
