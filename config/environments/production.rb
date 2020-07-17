@@ -9,7 +9,7 @@ Rails.application.configure do
   config.web_socket_server_url = "wss://myestateapi.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://myestateapi.herokuapp.com']
   
-  config.action_cable.disable_request_forgery_protection = true
+  # config.action_cable.disable_request_forgery_protection = true
   config.action_cable.url = 'wss://myestateapi.herokuapp.com/cable'
 
   # Eager load code on boot. This eager loads most of Rails and
