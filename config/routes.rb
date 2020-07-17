@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :alerts, only: %i[create]
   resources :favorites, only: %i[index create destroy]
   mount ActionCable.server => '/cable'
+  resources :channels
 end
