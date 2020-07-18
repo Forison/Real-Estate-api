@@ -9,7 +9,6 @@ class UsersController < ApplicationController
       head(:unprocessable_entity)
     end
   end
-
   private
 
   def user_params

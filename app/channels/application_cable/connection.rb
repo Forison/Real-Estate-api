@@ -5,22 +5,24 @@ module ApplicationCable
     def connect 
       self.current_user = verify_user(request.params[:token])
       logger.add_tags 'ActionCable', current_user.id
+      self.current_user
     end
 
     private 
     def decode(token)
-      JsonWebToken.decode(token)
+      result = JsonWebToken.decode(token)
+      result["user_id"]
     end
 
     def verify_user(token)
       decoded_token  = decode(token)
       auth_user = User.find(decoded_token)
-      if !auth_user.nil?
+      auth_user
+      if auth_user
         return auth_user
       else
         return reject_unauthorized_connection
       end
     end
   end
-
 end
