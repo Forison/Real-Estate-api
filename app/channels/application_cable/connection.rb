@@ -3,21 +3,17 @@ module ApplicationCable
     identified_by :current_user
 
     def connect 
-      self.current_user = verify_user(request.params[:token])
+      token = request.headers[:HTTP_SEC_WEBSOCKET_PROTOCOL].split(' ').last
+      self.current_user = verify_user(token)
       logger.add_tags 'ActionCable', current_user.id
-      self.current_user
+      p current_user
     end
 
     private 
-    def decode(token)
-      result = JsonWebToken.decode(token)
-      result["user_id"]
-    end
 
     def verify_user(token)
-      decoded_token  = decode(token)
-      auth_user = User.find(decoded_token)
-      auth_user
+      user_id = JsonWebToken.decode(token)['user_id']
+      auth_user = User.find(user_id)
       if auth_user
         return auth_user
       else
