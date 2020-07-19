@@ -6,7 +6,6 @@ module ApplicationCable
       token = request.headers[:HTTP_SEC_WEBSOCKET_PROTOCOL].split(' ').last
       self.current_user = verify_user(token)
       logger.add_tags 'ActionCable', current_user.id
-      p current_user
     end
 
     private 
@@ -17,7 +16,7 @@ module ApplicationCable
       if auth_user
         return auth_user
       else
-        return reject_unauthorized_connection
+        render json: { error: "unauthorized" }, status: :unauthorized
       end
     end
   end
