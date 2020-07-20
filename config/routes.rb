@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/user_homes', to: 'currents#user_homes'
   get '/uploader_homes/:id', to: 'currents#user_homes'
   get '/wanted_user/:id', to: 'currents#find_a_user'
+  get '/top_apartment', to: 'favorites#top_apartment'
   resources :alerts, only: %i[create]
   resources :favorites, only: %i[index create destroy]
   mount ActionCable.server => '/cable'

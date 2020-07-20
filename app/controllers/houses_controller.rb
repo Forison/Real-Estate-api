@@ -9,6 +9,7 @@ class HousesController < ApplicationController
     houses = @current_user.houses.build(prop_params)
     if houses.save
       render json: houses, status: :created
+      ActionCable.server.broadcast('houses_channel', houses )
     else
       head(:unprocessable_entity)
     end

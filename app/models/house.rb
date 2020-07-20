@@ -7,5 +7,5 @@ class House < ApplicationRecord
   validates :location, presence: true
   validates :pictures, presence: true
 
-  after_create_commit { NotificationBroadcastJob.perform_later(self.id) }
+  after_create_commit { NotificationBroadcastJob.perform_later(self.id) } 
 end

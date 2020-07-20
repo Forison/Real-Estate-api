@@ -1,8 +1,17 @@
 class FavoritesController < ApplicationController
-  before_action :authorize_request
+  before_action :authorize_request, except: [:top_apartment]
   
   def index
     render json: @current_user.favorites, status: :ok
+  end
+
+  def top_apartment
+    top_aparts = []
+    fav_aparts = Favorite.pluck('house_id')
+    fav_aparts.each do | i |
+      top_aparts << House.find(i)
+    end
+    render json: top_aparts, status: :ok
   end
 
   def create

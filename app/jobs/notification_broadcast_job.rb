@@ -1,5 +1,5 @@
 class NotificationBroadcastJob < ApplicationJob
-  queue_as :low
+  queue_as :default
 
   def perform(house_id)
     houses = House.find_by_id(house_id)
