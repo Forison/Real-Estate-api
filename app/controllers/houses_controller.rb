@@ -10,6 +10,7 @@ class HousesController < ApplicationController
     if houses.save
       render json: houses, status: :created
       ActionCable.server.broadcast('houses_channel', houses )
+      house_notification(houses.id)
     else
       head(:unprocessable_entity)
     end
@@ -21,6 +22,12 @@ class HousesController < ApplicationController
   end
 
   private
+  
+  def house_notification(house_id)
+    houses = House.find_by_id(house_id)
+    return unless houses.present?
+    Houseupdate.create!(poster: houses.user_id, item: house_id, reader: '', read_at: '')
+  end
 
   def prop_params
     params.require(:house).permit(
