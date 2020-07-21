@@ -6,4 +6,12 @@ class House < ApplicationRecord
   validates :price, presence: true
   validates :location, presence: true
   validates :pictures, presence: true
+
+  after_create_commit { house_notification(self.id) } 
+
+  def house_notification(house_id)
+    houses = House.find_by_id(house_id)
+    return unless houses.present?
+    Houseupdate.create!(poster: houses.user_id, item: house_id, reader: nil, status: nil)
+  end
 end

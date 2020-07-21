@@ -2,9 +2,15 @@
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  # config.action_cable.allowed_request_origins = ['file://']
   # Code is not reloaded between requests.
   config.cache_classes = true
+
+  config.web_socket_server_url = "wss://myestateapi.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://frozen-bastion-98066.herokuapp.com']
+  
+  config.action_cable.disable_request_forgery_protection = true
+  config.action_cable.url = 'wss://myestateapi.herokuapp.com/cable'
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

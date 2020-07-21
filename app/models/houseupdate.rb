@@ -1,0 +1,3 @@
+class Houseupdate < ApplicationRecord
+  
+end
