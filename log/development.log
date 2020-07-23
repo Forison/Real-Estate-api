@@ -7291,3 +7291,128 @@ Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrad
 [ActionCable] [2] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMg)
 [ActionCable] [2] HousesChannel is transmitting the subscription confirmation
 [ActionCable] [2] HousesChannel is streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-21 12:56:53 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-21 12:56:53 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/cable" for ::1 at 2020-07-21 12:56:53 -0400
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [2] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMg)
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-21 12:56:53 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [2] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMg)
+[ActionCable] [2] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [2] HousesChannel is streaming from houses_channel
+[ActionCable] [2] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [2] HousesChannel is streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-21 12:56:53 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-21 12:56:53 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [2] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMg)
+[ActionCable] [2] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [2] HousesChannel is streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-21 12:56:54 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-21 12:56:54 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [2] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMg)
+[ActionCable] [2] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [2] HousesChannel is streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-21 12:56:54 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-21 12:56:54 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [2] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMg)
+[ActionCable] [2] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [2] HousesChannel is streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-21 12:56:54 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-21 12:56:54 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [2] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMg)
+[ActionCable] [2] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [2] HousesChannel is streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-21 12:56:54 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-21 12:56:54 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [2] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMg)
+[ActionCable] [2] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [2] HousesChannel is streaming from houses_channel
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (125.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Real_Estate_api_development"[0m
+  [1m[35m (111.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Real_Estate_api_test"[0m
+  [1m[35m (357.7ms)[0m  [1m[35mCREATE DATABASE "Real_Estate_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (254.5ms)[0m  [1m[35mCREATE DATABASE "Real_Estate_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (20.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5068306228320545910)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200201153058)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "country" character varying, "email" character varying, "picture" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200201153058"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAuthenticationTokenToUsers (20200201155254)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "authentication_token" character varying(30)[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200201155254"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateHouses (20200212111425)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE "houses" ("id" bigserial primary key, "user_id" bigint NOT NULL, "name" character varying, "category" character varying, "description" character varying, "price" character varying, "location" character varying, "pictures" character varying[] DEFAULT '{}', "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_da9c5cc6d2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE  INDEX  "index_houses_on_user_id" ON "houses"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200212111425"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAlerts (20200326075120)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "alerts" ("id" bigserial primary key, "sender" character varying, "message" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200326075120"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFavorites (20200619104241)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "user_id" bigint NOT NULL, "house_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_d15744e438"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_108e1c1dc0"
+FOREIGN KEY ("house_id")
+  REFERENCES "houses" ("id")
+)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_house_id" ON "favorites"  ("house_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200619104241"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateHouseupdates (20200720173750)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "houseupdates" ("id" bigserial primary key, "poster" integer, "item" integer, "reader" integer DEFAULT NULL, "read_at" timestamp DEFAULT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200720173750"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNotiLevelToUsers (20200723113934)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "noti_level" Integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200723113934"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-23 11:39:51.814759"], ["updated_at", "2020-07-23 11:39:51.814759"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5068306228320545910)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
