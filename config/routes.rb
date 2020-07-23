@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :houseupdates, only: %i[index]
   resources :sellers, only: %i[index show]
   resources :houses
   get '/my_favorites/:ids', to: 'myhouses#favorite'

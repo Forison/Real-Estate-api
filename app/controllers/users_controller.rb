@@ -12,8 +12,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    params[id] = @current_user.id
-    notified = User.find(params[:id]).update_column(:noti_level, Houseupdate.pluck('id').max)
+    notified = User.find(@current_user.id).update_column(:noti_level, Houseupdate.pluck('id').max)
     if notified
       head(:ok)
     else
