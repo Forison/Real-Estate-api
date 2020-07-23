@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :houses, dependent: :destroy
   acts_as_token_authenticatable
   before_save { self.email = email.downcase }
+  before_save { self.noti_level = Houseupdate.pluck('id').max == nil ? 0 : Houseupdate.pluck('id').max }
   validates :username, presence: true, length: { maximum: 20 }
   validates :country, presence: true
   validates :picture, presence: true

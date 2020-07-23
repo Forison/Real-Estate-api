@@ -17,7 +17,8 @@ class UsersController < ApplicationController
       :email,
       :country,
       :password,
-      :picture
+      :picture,
+      :noti_level
     )
   end
 end
