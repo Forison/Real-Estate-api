@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'houseupdates/update'
   resources :sellers, only: %i[index show]
   resources :houses
   get '/my_favorites/:ids', to: 'myhouses#favorite'
-  resources :users, only: %i[create]
+  resources :users, only: %i[create update]
   resources :sessions, only: %i[create destroy]
   get '/login_user', to: 'currents#login_user'
   get '/is_user_login', to: 'currents#user_login?'

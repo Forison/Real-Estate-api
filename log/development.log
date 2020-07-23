@@ -8846,3 +8846,328 @@ Processing by FavoritesController#index as HTML
 Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.9ms | Allocations: 1835)
 
 
+Started GET "/cable" for ::1 at 2020-07-23 08:16:04 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:16:04 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:16:06 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:16:06 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:16:06 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:16:06 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:16:06 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:16:06 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:49:02 -0400
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:49:02 -0400
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:49:02 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:49:02 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:49:04 -0400
+Started GET "/houses" for ::1 at 2020-07-23 08:49:05 -0400
+Started GET "/top_apartment" for ::1 at 2020-07-23 08:49:05 -0400
+Started GET "/favorites" for ::1 at 2020-07-23 08:49:05 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:49:05 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mFavorite Load (3.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Processing by FavoritesController#top_apartment as HTML
+Processing by HousesController#index as HTML
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "favorites"."house_id" FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `top_apartment'
+Completed 200 OK in 381ms (Views: 49.3ms | ActiveRecord: 172.1ms | Allocations: 27660)
+
+
+  [1m[36mHouse Load (61.5ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  ↳ app/controllers/houses_controller.rb:5:in `index'
+Completed 200 OK in 92ms (Views: 23.4ms | ActiveRecord: 61.5ms | Allocations: 10935)
+
+
+  [1m[36mHouse Load (1.9ms)[0m  [1m[34mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:12:in `block in top_apartment'
+Completed 200 OK in 107ms (Views: 0.7ms | ActiveRecord: 87.8ms | Allocations: 15947)
+
+
+Started GET "/cable" for ::1 at 2020-07-23 08:50:09 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:50:09 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:50:24 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:50:25 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:50:25 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/top_apartment" for ::1 at 2020-07-23 08:50:25 -0400
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+Started GET "/favorites" for ::1 at 2020-07-23 08:50:25 -0400
+Processing by FavoritesController#top_apartment as HTML
+Started GET "/houses" for ::1 at 2020-07-23 08:50:25 -0400
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "favorites"."house_id" FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `top_apartment'
+Processing by FavoritesController#index as HTML
+Processing by HousesController#index as HTML
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  ↳ app/controllers/houses_controller.rb:5:in `index'
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 1.0ms | Allocations: 8590)
+
+
+  ↳ app/controllers/favorites_controller.rb:12:in `block in top_apartment'
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+Completed 200 OK in 48ms (Views: 0.6ms | ActiveRecord: 12.3ms | Allocations: 18785)
+
+
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 12.0ms | ActiveRecord: 6.3ms | Allocations: 19377)
+
+
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:50:53 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:50:54 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:50:54 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+Started GET "/top_apartment" for ::1 at 2020-07-23 08:50:54 -0400
+Started GET "/houses" for ::1 at 2020-07-23 08:50:54 -0400
+Processing by FavoritesController#top_apartment as HTML
+Processing by HousesController#index as HTML
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "favorites"."house_id" FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `top_apartment'
+  [1m[36mHouse Load (1.5ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  ↳ app/controllers/houses_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.5ms | Allocations: 1587)
+
+
+Started GET "/favorites" for ::1 at 2020-07-23 08:50:54 -0400
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:12:in `block in top_apartment'
+Completed 200 OK in 15ms (Views: 1.4ms | ActiveRecord: 2.8ms | Allocations: 3656)
+
+
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 2.8ms | ActiveRecord: 4.0ms | Allocations: 1692)
+
+
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:50:58 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:50:58 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:50:58 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+Started GET "/top_apartment" for ::1 at 2020-07-23 08:50:58 -0400
+Processing by FavoritesController#top_apartment as HTML
+Started GET "/houses" for ::1 at 2020-07-23 08:50:58 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "favorites"."house_id" FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `top_apartment'
+Processing by HousesController#index as HTML
+  [1m[36mHouse Load (2.2ms)[0m  [1m[34mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:12:in `block in top_apartment'
+  [1m[36mHouse Load (1.6ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  ↳ app/controllers/houses_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.6ms | Allocations: 1929)
+
+
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 2.8ms | Allocations: 2051)
+
+
+Started GET "/favorites" for ::1 at 2020-07-23 08:50:58 -0400
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mFavorite Load (0.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 1.2ms | Allocations: 1692)
+
+
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:54:38 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:54:38 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:54:38 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+Started GET "/houses" for ::1 at 2020-07-23 08:54:39 -0400
+Started GET "/top_apartment" for ::1 at 2020-07-23 08:54:39 -0400
+Processing by HousesController#index as HTML
+Processing by FavoritesController#top_apartment as HTML
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "favorites"."house_id" FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `top_apartment'
+  [1m[36mHouse Load (10.4ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  ↳ app/controllers/houses_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 7.3ms | ActiveRecord: 10.4ms | Allocations: 2177)
+
+
+  [1m[36mHouse Load (7.9ms)[0m  [1m[34mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:12:in `block in top_apartment'
+Started GET "/favorites" for ::1 at 2020-07-23 08:54:39 -0400
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 14.4ms | Allocations: 2941)
+
+
+Processing by FavoritesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 14.3ms | ActiveRecord: 1.6ms | Allocations: 1854)
+
+
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:54:42 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:54:42 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:54:42 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+Started GET "/top_apartment" for ::1 at 2020-07-23 08:54:42 -0400
+Processing by FavoritesController#top_apartment as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "favorites"."house_id" FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `top_apartment'
+Started GET "/houses" for ::1 at 2020-07-23 08:54:42 -0400
+Started GET "/favorites" for ::1 at 2020-07-23 08:54:42 -0400
+  [1m[36mHouse Load (1.1ms)[0m  [1m[34mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:12:in `block in top_apartment'
+Completed 200 OK in 13ms (Views: 2.8ms | ActiveRecord: 1.5ms | Allocations: 2663)
+
+
+Processing by HousesController#index as HTML
+Processing by FavoritesController#index as HTML
+  [1m[36mHouse Load (1.2ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  ↳ app/controllers/houses_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.2ms | Allocations: 1294)
+
+
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 4.6ms | Allocations: 2942)
+
+
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:54:58 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:54:59 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:54:59 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+Started GET "/top_apartment" for ::1 at 2020-07-23 08:54:59 -0400
+Processing by FavoritesController#top_apartment as HTML
+Started GET "/houses" for ::1 at 2020-07-23 08:54:59 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "favorites"."house_id" FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `top_apartment'
+Started GET "/favorites" for ::1 at 2020-07-23 08:54:59 -0400
+  [1m[36mHouse Load (1.1ms)[0m  [1m[34mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:12:in `block in top_apartment'
+Processing by HousesController#index as HTML
+Processing by FavoritesController#index as HTML
+  [1m[36mHouse Load (3.2ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 2.8ms | Allocations: 2776)
+
+
+  ↳ app/controllers/houses_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 3.2ms | Allocations: 1449)
+
+
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 4.5ms | ActiveRecord: 5.6ms | Allocations: 3074)
+
+
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:55:03 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
+Started GET "/cable" for ::1 at 2020-07-23 08:55:05 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2020-07-23 08:55:05 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:15:in `verify_user'
+[ActionCable] [1] Registered connection (Z2lkOi8vcmVhbC1lc3RhdGUtYXBpL1VzZXIvMQ)
+Started GET "/favorites" for ::1 at 2020-07-23 08:55:05 -0400
+Processing by FavoritesController#index as HTML
+Started GET "/top_apartment" for ::1 at 2020-07-23 08:55:05 -0400
+Started GET "/houses" for ::1 at 2020-07-23 08:55:05 -0400
+Processing by FavoritesController#top_apartment as HTML
+Processing by HousesController#index as HTML
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `authorize_request'
+  [1m[36mHouse Load (8.4ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  ↳ app/controllers/houses_controller.rb:5:in `index'
+  [1m[35m (26.1ms)[0m  [1m[34mSELECT "favorites"."house_id" FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:10:in `top_apartment'
+Completed 200 OK in 28ms (Views: 19.4ms | ActiveRecord: 8.4ms | Allocations: 1819)
+
+
+  [1m[36mFavorite Load (20.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+  [1m[36mHouse Load (5.8ms)[0m  [1m[34mSELECT "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 10.1ms | ActiveRecord: 36.6ms | Allocations: 4664)
+
+
+  ↳ app/controllers/favorites_controller.rb:12:in `block in top_apartment'
+Completed 200 OK in 57ms (Views: 1.3ms | ActiveRecord: 31.9ms | Allocations: 4936)
+
+
+[ActionCable] [1] HousesChannel is transmitting the subscription confirmation
+[ActionCable] [1] HousesChannel is streaming from houses_channel
+[ActionCable] [1] Finished "/cable/" [WebSocket] for ::1 at 2020-07-23 08:55:07 -0400
+[ActionCable] [1] HousesChannel stopped streaming from houses_channel
