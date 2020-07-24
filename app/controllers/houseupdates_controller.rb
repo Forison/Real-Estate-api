@@ -8,5 +8,5 @@ class HouseupdatesController < ApplicationController
     end
     render json: house_listings, status: :ok
   end
-
+  
 end

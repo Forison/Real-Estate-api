@@ -36,6 +36,16 @@ class CurrentsController < ApplicationController
     end
   end
 
+  def check_for_notification
+    users_last_notification = @current_user.noti_level
+    latest_notification =  Houseupdate.pluck('id').max
+    if (users_last_notification == latest_notification)
+      render json: {notification: false}, status: :ok
+    elsif (users_last_notification < latest_notification)
+      render json: {notification: true}, status: :ok
+    end
+  end
+
   def user_id
     if @current_user
       render json: { userid: @current_user.id }, status: :ok
