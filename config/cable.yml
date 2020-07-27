@@ -10,5 +10,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") %>/<%= ENV.fetch("REDIS_DB") %>
+  url: redis://redistogo:94fe2bfd88879a9a682b3e349fbdffc5@spinyfin.redistogo.com:11357/
   channel_prefix: Real_Estate_api_production
