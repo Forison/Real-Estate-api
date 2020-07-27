@@ -37,11 +37,9 @@ module RealEstateApi
     config.api_only = true
     Rails.application.config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
       allow do
-        origins '*'
-
-        resource '*',
-                 headers: :any,
-                 methods: %i[get post put patch delete options head]
+        origins '*',
+        resource '*', headers: :any, methods: %i[get post put patch delete options head],
+        credentials: true
       end
     end
   end
