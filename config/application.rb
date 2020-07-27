@@ -35,7 +35,7 @@ module RealEstateApi
     # Skip views, helpers and assets when generating a new resource.
     config.active_job.queue_adapter = :sidekiq
     config.api_only = true
-    
+
     Rails.application.config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
