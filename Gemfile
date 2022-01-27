@@ -16,7 +16,7 @@ gem 'redis', '~> 4.0'
 gem 'redis-namespace'
 gem 'redis-rails'
 gem 'dotenv-rails'
-gem 'sidekiq', '~> 5.0', '>= 5.0.5'
+gem 'sidekiq', '~> 6.4'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
